@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_posts-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_users-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/post-form-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/containers/post-list-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/containers/post-detail-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_index-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_posts-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_users-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/post-form-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/containers/post-list-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/containers/post-detail-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_index-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

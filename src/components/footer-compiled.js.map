@@ -1,0 +1,1 @@
+{"version":3,"sources":["footer.js"],"names":[],"mappings":";;;;;;AAAA;;;;;;AAEA,IAAM,SAAS,SAAT,MAAS,GAAM,CAEpB,CAFD;;kBAIe,M","file":"footer-compiled.js","sourcesContent":["import React from 'react';\n\nconst Footer = () => {\n    \n}\n\nexport default Footer;"]}

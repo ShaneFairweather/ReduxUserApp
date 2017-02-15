@@ -1,0 +1,1 @@
+{"version":3,"sources":["routes.js"],"names":[],"mappings":";;AAAA;;;;AACA;;AACA","file":"routes-compiled.js","sourcesContent":["import React from 'react';\nimport { Route, IndexRoute } from 'react-router';\nimport App from './components/App';\n\n"]}

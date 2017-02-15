@@ -1,24 +1,65 @@
 .App {
+  text-align: center; }
+
+html {
+  background-color: #F9F9FB;
+  position: relative;
+  min-height: 100%; }
+
+body {
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #F9F9FB; }
+
+#root, #main {
+  background-color: #F9F9FB; }
+
+.navbar {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 0; }
+
+#main {
+  margin-top: 80px;
+  margin-bottom: 80px; }
+
+.list-group {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 6px; }
+  .list-group a {
+    text-decoration: none;
+    color: #333;
+    border-radius: 0; }
+  .list-group span {
+    border-radius: 0; }
+
+.list-group a {
+  border-radius: 0; }
+
+.list-group-item {
+  cursor: pointer;
+  border-radius: 0; }
+  .list-group-item:hover {
+    background-color: #e7e7e7; }
+
+#portrait {
+  cursor: default; }
+  #portrait:hover {
+    background-color: white; }
+
+.panel-body {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+
+.footer {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  border-top: 1px solid #e7e7e7;
+  background-color: #f8f8f8;
+  color: #e7e7e7;
   padding: 20px;
-  color: white;
-}
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+/*# sourceMappingURL=App.css.map */

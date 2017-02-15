@@ -1,0 +1,1 @@
+{"version":3,"sources":["account.js"],"names":[],"mappings":";;AAAA;;;;;;AAEA,IAAM,UAAU,SAAV,OAAU,GAAM,CAErB,CAFD","file":"account-compiled.js","sourcesContent":["import React from 'React';\n\nconst Account = () => {\n    \n}"]}

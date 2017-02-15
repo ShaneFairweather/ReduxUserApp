@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addPost } from '../actions/actions_index';
 import { bindActionCreators } from 'redux';
-import { Button, ButtonToolbar, ControlLabel, ListGroupItem, ListGroup, Panel }  from 'react-bootstrap';
+import { Button, ButtonToolbar, Panel }  from 'react-bootstrap';
+import { Link } from 'react-router';
 
 class PostList extends Component {
     renderList() {
@@ -25,9 +26,9 @@ class PostList extends Component {
     render() {
         return (
             <div>
-                <ListGroup className="postList">
+                <div className="postList">
                     {this.renderList()}
-                </ListGroup>
+                </div>
             </div>
         )
     }

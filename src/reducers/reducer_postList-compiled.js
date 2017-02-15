@@ -11,6 +11,8 @@ exports.default = function () {
     switch (action.type) {
         case 'ADD_POST':
             return action.payload;
+        default:
+            return state;
     }
     return state;
 };

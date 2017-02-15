@@ -1,0 +1,1 @@
+{"version":3,"sources":["header.js"],"names":[],"mappings":";;;;;;AAAA;;;;;;AAEA,IAAM,SAAS,SAAT,MAAS,GAAM,CAGpB,CAHD;;kBAKe,M","file":"header-compiled.js","sourcesContent":["import React from 'react';\n\nconst Header = () => {\n\n\n}\n\nexport default Header;"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["panel.js"],"names":[],"mappings":";;;;;;AAAA;;;;;;AAEA,IAAM,QAAQ,SAAR,KAAQ,GAAM;AAChB;AAEH,CAHD;;kBAKe,K","file":"panel-compiled.js","sourcesContent":["import React from 'react';\n\nconst Panel = () => {\n    return \n\n}\n\nexport default Panel;"]}

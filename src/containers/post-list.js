@@ -2,28 +2,32 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addPost } from '../actions/actions_index';
 import { bindActionCreators } from 'redux';
+import { Button, ButtonToolbar, ControlLabel, ListGroupItem, ListGroup, Panel }  from 'react-bootstrap';
 
 class PostList extends Component {
     renderList() {
         return this.props.posts.map((post) => {
             return (
-                <li key={post.author + post.content} className='post'>{post.author}: {post.content}
-                    <button
-                        onClick={() => this.props.addPost(post)}
-                        className="btn">
-                        Add Post
-                    </button>
-
-                </li>
+                <Panel key={post.author + post.content} className='post'>
+                    <h3>{post.author}</h3>
+                    <p>{post.content}</p>
+                    <ButtonToolbar>
+                        <Button
+                            onClick={() => this.props.addPost(post)}
+                            className="btn">
+                            Add Post
+                        </Button>
+                    </ButtonToolbar>
+                </Panel>
             )
         })
     }
     render() {
         return (
             <div>
-                <ul className="postList">
+                <ListGroup className="postList">
                     {this.renderList()}
-                </ul>
+                </ListGroup>
             </div>
         )
     }

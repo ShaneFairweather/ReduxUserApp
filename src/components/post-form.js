@@ -1,13 +1,22 @@
 import React from 'react';
+import { Button, ButtonToolbar, Form, FormGroup, ControlLabel, Panel }  from 'react-bootstrap';
+import { FormControl }  from 'react-bootstrap';
+
 
 const PostForm = () => {
     return (
-        <div>
-            <form>
-                <input />
-                <button className="btn">Add Post</button>
-            </form>
-        </div>
+        <Panel>
+            <Form>
+                <FormGroup controlId="formInlineName">
+                    <FormControl componentClass="textarea" placeholder="textarea" />
+                </FormGroup>
+                <ButtonToolbar>
+                    <Button type="submit">
+                        Add post
+                    </Button>
+                </ButtonToolbar>
+            </Form>
+        </Panel>
     )
 }
 

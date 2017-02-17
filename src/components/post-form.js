@@ -8,7 +8,7 @@ const PostForm = () => {
         <Panel>
             <Form>
                 <FormGroup controlId="formInlineName">
-                    <FormControl componentClass="textarea" placeholder="textarea" />
+                    <FormControl componentClass="textarea" placeholder="Enter post content" />
                 </FormGroup>
                 <ButtonToolbar>
                     <Button type="submit">

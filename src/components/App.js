@@ -6,6 +6,8 @@ import Header from '../components/header';
 import Footer from './footer'
 import PostDetail from '../containers/friends-list';
 import ControlPanel from './controlPanel';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 
 class App extends Component {
@@ -19,7 +21,13 @@ class App extends Component {
                     <Col xs={12} md={3}>
                         <ControlPanel />
                     </Col>
-                  {this.props.children}
+                    <ReactCSSTransitionGroup
+                        transitionName="example"
+                        transitionAppear={true}
+                        transitionEnterTimeout={400}
+                        transitiionLeaveTimeout={400}>
+                        {this.props.children}
+                    </ReactCSSTransitionGroup>
                     <Col xs={12} md={3}>
                         <PostDetail />
                     </Col>

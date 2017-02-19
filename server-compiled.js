@@ -5,10 +5,14 @@ var http = require('http');
 var bodyParser = require('body-parser');
 var app = express();
 var morgan = require('morgan');
-var router = require('router');
+var router = require('./router');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:auth/auth');
 
 app.use(morgan('combined'));
 app.use(bodyParser.json({ type: '*/*' }));
+router(app);
 
 var port = process.env.port || 3030;
 var server = http.createServer(app);

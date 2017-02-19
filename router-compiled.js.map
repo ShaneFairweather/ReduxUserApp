@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"router-compiled.js"}
+{"version":3,"sources":["router.js"],"names":[],"mappings":";;AAAA,IAAM,iBAAiB,QAAQ,8BAAR,CAAvB;;AAEA,OAAO,OAAP,GAAiB,UAAS,GAAT,EAAc;AAC3B,QAAI,IAAJ,CAAS,SAAT,EAAoB,eAAe,MAAnC;AACH,CAFD","file":"router-compiled.js","sourcesContent":["const Authentication = require('./controllers/authentication');\n\nmodule.exports = function(app) {\n    app.post('/signup', Authentication.signup);\n};"]}

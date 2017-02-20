@@ -5,10 +5,38 @@ var User = require('../model/user');
 var config = require('../config');
 var JwtStrategy = require('passport-jwt').Strategy;
 var ExtractJwt = require('passport-jwt').ExtractJwt;
+var LocalStrategy = require('passport-local');
+
+//Create local strategy
+var localOptions = { usernameField: 'email' };
+var localLogin = new LocalStrategy(localOptions, function (email, password, done) {
+    //verify username and password, call done
+    User.findOne({ email: email }, function (err, user) {
+        if (err) {
+            return done(err);
+        }
+        if (!user) {
+            return done(null, false);
+        }
+
+        //compare passwords
+        user.comparePasswords(password, function (err, isMatch) {
+            if (err) {
+                return done(err);
+            };
+            if (!isMatch) {
+                return done(null, false);
+            }
+
+            return done(null, user);
+        });
+    });
+});
 
 //jwt configuration
 var jwtOptions = {
-    jwtFromRequest: jwtFromRequest
+    jwtFromRequest: ExtractJwt.fromHeader('authorization'),
+    secretOrKey: config.secret
 };
 
 //create jwt strategy
@@ -32,5 +60,7 @@ var jwtLogin = new JwtStrategy(jwtOptions, function (payload, done) {
 });
 
 //tell passport to use jwt
+passport.use(jwtLogin);
+passport.use(localLogin);
 
 //# sourceMappingURL=passport-compiled.js.map

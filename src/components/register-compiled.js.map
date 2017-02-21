@@ -1,0 +1,1 @@
+{"version":3,"sources":["register.js"],"names":[],"mappings":";;;;;;AAAA;;;;;;AAEA,IAAM,WAAW,SAAX,QAAW,GAAM,CAGtB,CAHD;;kBAKe,Q","file":"register-compiled.js","sourcesContent":["import React from 'react';\n\nconst Register = () => {\n\n\n}\n\nexport default Register;"]}

@@ -21,13 +21,7 @@ class App extends Component {
                     <Col xs={12} md={3}>
                         <ControlPanel />
                     </Col>
-                    <ReactCSSTransitionGroup
-                        transitionName="example"
-                        transitionAppear={true}
-                        transitionEnterTimeout={400}
-                        transitiionLeaveTimeout={400}>
-                        {this.props.children}
-                    </ReactCSSTransitionGroup>
+                    {this.props.children}
                     <Col xs={12} md={3}>
                         <PostDetail />
                     </Col>

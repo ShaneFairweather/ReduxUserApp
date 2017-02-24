@@ -5,7 +5,7 @@ export default class PostDetail extends Component {
     render() {
         return (
             <Panel>
-                <h3>Friends</h3>
+                <h3>Users</h3>
                 <ul>
                     <li>Other User</li>
                     <li>Other User</li>

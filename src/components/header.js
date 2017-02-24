@@ -6,7 +6,7 @@ const Header = () => {
         <Navbar fixedTop collapseOnSelect>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#">InterReact</a>
+                    <a href="/">InterReact</a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

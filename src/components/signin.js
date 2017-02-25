@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { reduxForm, Field } from 'redux-form';
 import { reducer as formReducer } from 'redux-form';
 import { Panel, Col, ButtonToolbar, Button, FormGroup, FormControl, Form } from 'react-bootstrap';
+import * as actions from '../actions/actions_signIn';
+
+const renderInput = field =>
+    <div>
+        <input {...field.input} type={field.type}/>
+        {field.meta.touched &&
+        field.meta.error &&
+        <span className="error">{field.meta.error}</span>}
+    </div>
 
 class Signin extends Component {
     handleFormSubmit({ email, password }) {
-        console.log(email, password);
+        console.log(email);
+        console.log(password);
+        this.props.signinUser({ email, password });
+
     }
 
     render() {
-        const { handleSubmit, fields: { email, password }} = this.props;
+        const { handleSubmit } = this.props;
 
         return (
             <Col xs={12} md={6}>
@@ -19,13 +31,21 @@ class Signin extends Component {
                     <br/>
                     <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                         <FormGroup controlId="signinEmail">
-                            <Field {...email} componentClass="input" placeholder="Email"/>
+                            <Field
+                                name="email"
+                                component={renderInput}
+                                type="text"
+                                placeholder="Email"/>
                         </FormGroup>
                         <FormGroup controlId="signinPassword">
-                            <Field {...password} componentClass="input" placeholder="Password"/>
+                            <Field
+                                 name="password"
+                                 component={renderInput}
+                                 type="password"
+                                 placeholder="Password"/>
                         </FormGroup>
                         <ButtonToolbar>
-                            <Button action="submit" type="submit">
+                            <Button type="submit">
                                 Log In
                             </Button>
                         </ButtonToolbar>
@@ -37,7 +57,6 @@ class Signin extends Component {
 }
 
 export default reduxForm({
-    form: 'signin',
-    fields: ['email', 'password']
-})(Signin);
+    form: 'signin'
+}, null, actions)(Signin);
 

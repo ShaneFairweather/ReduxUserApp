@@ -2,30 +2,31 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/src/components/home-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/reducers/reducer_index-compiled.js" />
         <item url="file://$PROJECT_DIR$/model/user-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/blog-compiled.js" />
-        <item url="file://$PROJECT_DIR$/server-compiled.js" />
         <item url="file://$PROJECT_DIR$/services/passport-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/controlPanel-compiled.js" />
+        <item url="file://$PROJECT_DIR$/controllers/authentication-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_posts-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_users-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/routes-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/post-form-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/footer-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/actions/actions_signIn-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/containers/post-list-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/containers/friends-list-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/reducers/reducer_index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/home-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/components/blog-compiled.js" />
+        <item url="file://$PROJECT_DIR$/server-compiled.js" />
         <item url="file://$PROJECT_DIR$/config-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/header-compiled.js" />
         <item url="file://$PROJECT_DIR$/router-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/reducers/reducer_posts-compiled.js" />
-        <item url="file://$PROJECT_DIR$/controllers/authentication-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/register-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/reducers/reducer_users-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/routes-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/signin-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/account-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/post-form-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/components/footer-compiled.js" />
         <item url="file://$PROJECT_DIR$/model/post-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/containers/post-list-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/containers/friends-list-compiled.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -34,18 +35,19 @@
       <root url="file://$PROJECT_DIR$/model/user-compiled.js" />
       <root url="file://$PROJECT_DIR$/services/passport-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/controlPanel-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/reducers/reducer_posts-compiled.js" />
       <root url="file://$PROJECT_DIR$/controllers/authentication-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/reducers/reducer_posts-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_users-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/routes-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/post-form-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/footer-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/actions/actions_signIn-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/containers/post-list-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/containers/friends-list-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/components/home-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/home-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/blog-compiled.js" />
       <root url="file://$PROJECT_DIR$/server-compiled.js" />
       <root url="file://$PROJECT_DIR$/config-compiled.js" />

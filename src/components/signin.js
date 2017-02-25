@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { reducer as formReducer } from 'redux-form';
 import { Panel, Col, ButtonToolbar, Button, FormGroup, FormControl, Form } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import * as actions from '../actions/actions_signIn';
 
 const renderInput = field =>
@@ -14,10 +15,19 @@ const renderInput = field =>
 
 class Signin extends Component {
     handleFormSubmit({ email, password }) {
-        console.log(email);
-        console.log(password);
+        // console.log(email);
         this.props.signinUser({ email, password });
 
+    }
+
+    renderAlert() {
+        if (this.props.errorMessage) {
+            return (
+                <div className="alert alert-danger">
+                    {this.props.errorMessage}
+                </div>
+            )
+        }
     }
 
     render() {
@@ -29,6 +39,7 @@ class Signin extends Component {
                     <h2>Sign In</h2>
                     <hr/>
                     <br/>
+                    {this.renderAlert()}
                     <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                         <FormGroup controlId="signinEmail">
                             <Field
@@ -39,10 +50,10 @@ class Signin extends Component {
                         </FormGroup>
                         <FormGroup controlId="signinPassword">
                             <Field
-                                 name="password"
-                                 component={renderInput}
-                                 type="password"
-                                 placeholder="Password"/>
+                                name="password"
+                                component={renderInput}
+                                type="password"
+                                placeholder="Password"/>
                         </FormGroup>
                         <ButtonToolbar>
                             <Button type="submit">
@@ -56,7 +67,15 @@ class Signin extends Component {
     }
 }
 
-export default reduxForm({
+function mapStateToProps(state) {
+    console.log(state.signin);
+    return { errorMessage: state.signin.error }
+}
+
+Signin = reduxForm({
     form: 'signin'
-}, null, actions)(Signin);
+})(Signin);
+
+export default connect(mapStateToProps, actions)(Signin);
+
 

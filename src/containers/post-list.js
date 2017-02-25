@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { addPost } from '../actions/actions_index';
 import { bindActionCreators } from 'redux';
 import { Button, ButtonToolbar, Panel }  from 'react-bootstrap';
-import { Link } from 'react-router';
 
 class PostList extends Component {
     renderList() {

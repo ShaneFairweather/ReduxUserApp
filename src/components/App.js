@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import '../App.css';
-import Header from '../components/header';
+import Header from '../containers/header';
 import Footer from './footer'
 import PostDetail from '../containers/friends-list';
 import ControlPanel from './controlPanel';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 

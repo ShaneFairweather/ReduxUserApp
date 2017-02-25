@@ -1,35 +1,76 @@
-import React from 'react';
-import { reducer as formReducer } from 'redux-form';
+import React, { Component } from 'react';
+import { reduxForm, Field } from 'redux-form';
+import { Panel, Col, ButtonToolbar, Button, FormGroup, Form } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import * as actions from '../actions/actions_index';
 
-const Register = () => {
-    return (
-        <Col xs={12} md={6}>
-            <Panel>
-                <h2>My Account</h2><hr/><br/>
-                <h4>Profile picture</h4>
-                <img src={portrait} alt="profileImg" />
-                <ButtonToolbar>
-                    <Button type="submit">
-                        Upload new picture
-                    </Button>
-                </ButtonToolbar><br/><hr/>
-                <h4>Change Password</h4>
-                <Form>
-                    <FormGroup controlId="formInlineName">
-                        <FormControl componentClass="input" placeholder="New password" />
-                    </FormGroup>
-                    <FormGroup controlId="formInlineName">
-                        <FormControl componentClass="input" placeholder="Repeat password" />
-                    </FormGroup>
-                    <ButtonToolbar>
-                        <Button type="submit">
-                            Change password
-                        </Button>
-                    </ButtonToolbar>
-                </Form>
-            </Panel>
-        </Col>
-    )
+const renderInput = field =>
+    <div>
+        <input {...field.input} type={field.type}/>
+        {field.meta.touched &&
+        field.meta.error &&
+        <span className="error">{field.meta.error}</span>}
+    </div>
+
+class Register extends Component {
+    handleFormSubmit({ email, password }) {
+        // console.log(email);
+        this.props.signinUser({ email, password });
+
+    }
+
+    renderAlert() {
+        if (this.props.errorMessage) {
+            return (
+                <div className="alert alert-danger">
+                    {this.props.errorMessage}
+                </div>
+            )
+        }
+    }
+
+    render() {
+        const { handleSubmit } = this.props;
+
+        return (
+            <Col xs={12} md={6}>
+                <Panel>
+                    <h2>Create an Account</h2>
+                    <hr/>
+                    {this.renderAlert()}
+                    <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                        <FormGroup controlId="signinEmail">
+                            <Field
+                                name="email"
+                                component={renderInput}
+                                type="text"
+                                placeholder="Email"/>
+                        </FormGroup>
+                        <FormGroup controlId="signinPassword">
+                            <Field
+                                name="password"
+                                component={renderInput}
+                                type="password"
+                                placeholder="Password"/>
+                        </FormGroup>
+                        <ButtonToolbar>
+                            <Button type="submit">
+                                Sign Up
+                            </Button>
+                        </ButtonToolbar>
+                    </Form>
+                </Panel>
+            </Col>
+        )
+    }
 }
 
-export default Register;
+function mapStateToProps(state) {
+    return { errorMessage: state.signin.error }
+}
+
+Register = reduxForm({
+    form: 'register'
+})(Register);
+
+export default connect(mapStateToProps, actions)(Register);

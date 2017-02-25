@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { reducer as formReducer } from 'redux-form';
-import { Panel, Col, ButtonToolbar, Button, FormGroup, FormControl, Form } from 'react-bootstrap';
+import { Panel, Col, ButtonToolbar, Button, FormGroup, Form } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import * as actions from '../actions/actions_signIn';
+import * as actions from '../actions/actions_index';
 
 const renderInput = field =>
     <div>
@@ -38,7 +37,6 @@ class Signin extends Component {
                 <Panel>
                     <h2>Sign In</h2>
                     <hr/>
-                    <br/>
                     {this.renderAlert()}
                     <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                         <FormGroup controlId="signinEmail">
@@ -68,7 +66,6 @@ class Signin extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state.signin);
     return { errorMessage: state.signin.error }
 }
 

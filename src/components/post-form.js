@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, ButtonToolbar, Form, FormGroup, Panel }  from 'react-bootstrap';
 import { FormControl }  from 'react-bootstrap';
+import { connect } from 'react-redux';
 
-
-const PostForm = () => {
-    return (
-        <Panel>
-            <Form>
-                <FormGroup controlId="formInlineName">
-                    <FormControl componentClass="textarea" placeholder="Enter post content" />
-                </FormGroup>
-                <ButtonToolbar>
-                    <Button type="submit">
-                        Add post
-                    </Button>
-                </ButtonToolbar>
-            </Form>
-        </Panel>
-    )
+class PostForm extends Component {
+    render() {
+        if(this.props.authenticated) {
+            return (
+                <Panel>
+                    <Form>
+                        <FormGroup controlId="formInlineName">
+                            <FormControl componentClass="textarea" placeholder="Enter post content"/>
+                        </FormGroup>
+                        <ButtonToolbar>
+                            <Button type="submit">
+                                Add post
+                            </Button>
+                        </ButtonToolbar>
+                    </Form>
+                </Panel>
+            )
+        } else {
+            return null
+        }
+    }
 }
 
 
-export default PostForm;
+function mapStateToProps(state) {
+    console.log(state.signin)
+    return {
+        authenticated: state.signin.authenticated
+    }
+}
+
+export default connect(mapStateToProps)(PostForm);

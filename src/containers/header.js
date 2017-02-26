@@ -11,7 +11,7 @@ class Header extends Component {
                     <NavItem eventKey={3}><Link to="/signout">Sign out</Link></NavItem>
                 </Nav>,
                 <Nav pullRight>
-                    <NavItem eventKey={2}>Hello, <Link to="/settings">User!</Link></NavItem>
+                    <NavItem eventKey={2}>Hello, <Link to="/settings">User</Link>!</NavItem>
                 </Nav>
 
             ])
@@ -45,7 +45,7 @@ class Header extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state.signin)
+    // console.log(state.signin)
     return {
         authenticated: state.signin.authenticated
     }

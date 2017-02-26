@@ -49,6 +49,37 @@ body {
 .panel-body {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
 
+.list-group-item {
+  border-bottom: 1px solid #ddd; }
+
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-radius: 0; }
+
+.thirdLink span, .lastLink span {
+  border-top: 0; }
+
+input {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
+
+.form-group span {
+  color: red; }
+
 .footer {
   text-align: center;
   position: absolute;

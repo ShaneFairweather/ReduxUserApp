@@ -4,6 +4,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.signinUser = signinUser;
+exports.signupUser = signupUser;
 exports.authError = authError;
 exports.signoutUser = signoutUser;
 
@@ -36,6 +37,15 @@ function signinUser(_ref) {
             //else show error to user
             dispatch(authError('Invalid email or password'));
         });
+    };
+}
+
+function signupUser(_ref2) {
+    var email = _ref2.email,
+        password = _ref2.password;
+
+    return function (dispatch) {
+        _axios2.default.post(ROOT_URL + '/signup', { email: email, password: password });
     };
 }
 

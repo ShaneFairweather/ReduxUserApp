@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { Panel, Col, ButtonToolbar, Button, FormGroup, Form } from 'react-bootstrap';
+import { Panel, Col, ButtonToolbar, Button, FormGroup, Form, ControlLabel } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions_index';
 
@@ -40,6 +40,7 @@ class Signin extends Component {
                     {this.renderAlert()}
                     <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                         <FormGroup controlId="signinEmail">
+                            <ControlLabel>Email</ControlLabel>
                             <Field
                                 name="email"
                                 component={renderInput}
@@ -47,6 +48,7 @@ class Signin extends Component {
                                 placeholder="Email"/>
                         </FormGroup>
                         <FormGroup controlId="signinPassword">
+                            <ControlLabel>Password</ControlLabel>
                             <Field
                                 name="password"
                                 component={renderInput}

@@ -45,7 +45,13 @@ function signupUser(_ref2) {
         password = _ref2.password;
 
     return function (dispatch) {
-        _axios2.default.post(ROOT_URL + '/signup', { email: email, password: password });
+        _axios2.default.post(ROOT_URL + '/signup', { email: email, password: password }).then(function (response) {
+            dispatch({ type: _actions_types.AUTH_USER });
+            localStorage.setItem('token', response.data.token);
+            _reactRouter.browserHistory.push('/');
+        }).catch(function (response) {
+            return dispatch(authError('An account with that email already exists'));
+        });
     };
 }
 

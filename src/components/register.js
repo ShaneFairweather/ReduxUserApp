@@ -41,8 +41,6 @@ class Register extends Component {
         // this.props.signinUser({ email, password });
         console.log(formProps);
         this.props.signupUser(formProps);
-
-
     }
 
     renderAlert() {
@@ -63,6 +61,7 @@ class Register extends Component {
                 <Panel>
                     <h2>Create an Account</h2>
                     <hr/>
+                    {this.renderAlert()}
                     <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                         <FormGroup controlId="signupEmail">
                             <Field

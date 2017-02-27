@@ -34,9 +34,6 @@ class Header extends Component {
                     <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav>
-                        <NavItem eventKey={1}><Link to="/">Link</Link></NavItem>
-                    </Nav>
                     {this.renderLinks()}
                 </Navbar.Collapse>
             </Navbar>

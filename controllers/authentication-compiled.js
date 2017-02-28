@@ -1,7 +1,7 @@
 'use strict';
 
 var jwt = require('jwt-simple');
-var User = require('../model/user.js');
+var User = require('../models/user.js');
 var config = require('../config');
 
 function tokenForUser(user) {
@@ -37,6 +37,7 @@ exports.signup = function (req, res, next) {
         //save user if user does not exist
         var user = new User({
             email: email,
+            username: username,
             password: password
         });
 

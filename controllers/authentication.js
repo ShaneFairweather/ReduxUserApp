@@ -1,5 +1,5 @@
 const jwt = require('jwt-simple');
-const User = require('../model/user.js');
+const User = require('../models/user.js');
 const config = require('../config');
 
 function tokenForUser(user) {
@@ -35,6 +35,7 @@ exports.signup = function(req, res, next) {
         //save user if user does not exist
         const user = new User({
             email: email,
+            username: username,
             password: password
         });
 

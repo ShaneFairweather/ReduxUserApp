@@ -4,7 +4,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import '../App.css';
 import Header from '../containers/header';
 import Footer from './footer'
-import PostDetail from '../containers/friends-list';
+import UserList from '../containers/user-list';
 import ControlPanel from './controlPanel';
 
 
@@ -22,7 +22,7 @@ class App extends Component {
                     </Col>
                     {this.props.children}
                     <Col xs={12} md={3}>
-                        <PostDetail />
+                        <UserList />
                     </Col>
                 </Row>
               </Grid>

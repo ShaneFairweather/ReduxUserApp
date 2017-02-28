@@ -20,11 +20,12 @@ var ROOT_URL = 'http://localhost:3030';
 
 function signinUser(_ref) {
     var email = _ref.email,
+        username = _ref.username,
         password = _ref.password;
 
     return function (dispatch) {
         //submit email/pw to server
-        _axios2.default.post(ROOT_URL + '/signin', { email: email, password: password }).then(function (response) {
+        _axios2.default.post(ROOT_URL + '/signin', { email: email, username: username, password: password }).then(function (response) {
             //update state to reflect authentication
             dispatch({ type: _actions_types.AUTH_USER });
             //save jwt token

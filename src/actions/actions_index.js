@@ -3,7 +3,8 @@ import { browserHistory } from 'react-router';
 import {
     AUTH_USER,
     UNAUTH_USER,
-    AUTH_ERROR
+    AUTH_ERROR,
+    GET_USERS
 } from './actions_types';
 
 const ROOT_URL = 'http://localhost:3030';
@@ -28,9 +29,9 @@ export function signinUser({ email, password }) {
     }
 }
 
-export function signupUser({email, password}) {
+export function signupUser({email, username, password}) {
     return function(dispatch) {
-        axios.post(`${ROOT_URL}/signup`, {email, password})
+        axios.post(`${ROOT_URL}/signup`, {email, username, password})
             .then(response => {
                 dispatch({ type: AUTH_USER });
                 localStorage.setItem('token', response.data.token);
@@ -53,4 +54,13 @@ export function signoutUser() {
         dispatch({ type: UNAUTH_USER });
         browserHistory.push('/');
     }
+}
+
+export function getUsers() {
+    const request = axios.get(`${ROOT_URL}/users`)
+
+    return {
+        type: GET_USERS,
+        payload: request
+    };
 }

@@ -7,6 +7,7 @@ exports.signinUser = signinUser;
 exports.signupUser = signupUser;
 exports.authError = authError;
 exports.signoutUser = signoutUser;
+exports.getUsers = getUsers;
 
 var _axios = require('axios');
 
@@ -42,10 +43,11 @@ function signinUser(_ref) {
 
 function signupUser(_ref2) {
     var email = _ref2.email,
+        username = _ref2.username,
         password = _ref2.password;
 
     return function (dispatch) {
-        _axios2.default.post(ROOT_URL + '/signup', { email: email, password: password }).then(function (response) {
+        _axios2.default.post(ROOT_URL + '/signup', { email: email, username: username, password: password }).then(function (response) {
             dispatch({ type: _actions_types.AUTH_USER });
             localStorage.setItem('token', response.data.token);
             _reactRouter.browserHistory.push('/');
@@ -67,6 +69,15 @@ function signoutUser() {
     return function (dispatch) {
         dispatch({ type: _actions_types.UNAUTH_USER });
         _reactRouter.browserHistory.push('/');
+    };
+}
+
+function getUsers() {
+    var request = _axios2.default.get(ROOT_URL + '/users');
+
+    return {
+        type: _actions_types.GET_USERS,
+        payload: request
     };
 }
 

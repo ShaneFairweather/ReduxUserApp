@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"reducer_users-compiled.js"}
+{"version":3,"sources":["reducer_users.js"],"names":[],"mappings":";;;;;;kBAAe,YAA+B;AAAA,QAAtB,KAAsB,uEAAd,IAAc;AAAA,QAAR,MAAQ;;AAC1C,YAAO,OAAO,IAAd;AACI,aAAK,WAAL;AACI,mBAAO,OAAO,OAAd;AAFR;AAIA,WAAO,KAAP;AACH,C","file":"reducer_users-compiled.js","sourcesContent":["export default function(state = null, action) {\n    switch(action.type) {\n        case 'GET_USERS':\n            return action.payload;\n    }\n    return state;\n}"]}

@@ -7,10 +7,10 @@ import {
 
 const ROOT_URL = 'http://localhost:3030';
 
-export function signinUser({ email, password }) {
+export function signinUser({ email, username, password }) {
     return function(dispatch) {
     //submit email/pw to server
-    axios.post(`${ROOT_URL}/signin`, { email, password })
+    axios.post(`${ROOT_URL}/signin`, { email, username, password })
         .then(response => {
             //update state to reflect authentication
             dispatch({ type: AUTH_USER });

@@ -1,7 +1,7 @@
 'use strict';
 
 var passport = require('passport');
-var User = require('../model/user');
+var User = require('../models/user');
 var config = require('../config');
 var JwtStrategy = require('passport-jwt').Strategy;
 var ExtractJwt = require('passport-jwt').ExtractJwt;

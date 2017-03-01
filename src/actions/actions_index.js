@@ -56,11 +56,23 @@ export function signoutUser() {
     }
 }
 
-export function getUsers() {
-    const request = axios.get(`${ROOT_URL}/users`)
+// export function getUsers() {
+//     // const request = axios.get(`${ROOT_URL}/users`);
+//     return function(dispatch) {
+//         axios.get(`${ROOT_URL}/users`)
+//         .then(response =>  {
+//             dispatch({ type: GET_USERS, payload: response.data });
+//             console.log("------------");
+//             console.log(response.data)
+//             console.log("------------");
+//         })
+//     };
+// }
 
+export function getUsers() {
+    const request = axios.get(`${ROOT_URL}/users`);
     return {
         type: GET_USERS,
         payload: request
-    };
+    }
 }

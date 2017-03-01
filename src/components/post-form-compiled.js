@@ -1,19 +1,39 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var PostForm = function PostForm() {
-    return;
-};
-
-exports.default = PostForm;
+// import React, { Component } from 'react';
+// import { Button, ButtonToolbar, Form, FormGroup, Panel }  from 'react-bootstrap';
+// import { FormControl }  from 'react-bootstrap';
+// import { connect } from 'react-redux';
+//
+// class PostForm extends Component {
+//     render() {
+//         if(this.props.authenticated) {
+//             return (
+//                 <Panel>
+//                     <Form>
+//                         <FormGroup controlId="formInlineName">
+//                             <FormControl componentClass="textarea" placeholder="Enter post content"/>
+//                         </FormGroup>
+//                         <ButtonToolbar>
+//                             <Button type="submit">
+//                                 Add post
+//                             </Button>
+//                         </ButtonToolbar>
+//                     </Form>
+//                 </Panel>
+//             )
+//         } else {
+//             return null
+//         }
+//     }
+// }
+//
+//
+// function mapStateToProps(state) {
+//     return {
+//         authenticated: state.signin.authenticated
+//     }
+// }
+//
+// export default connect(mapStateToProps)(PostForm);
+"use strict";
 
 //# sourceMappingURL=post-form-compiled.js.map

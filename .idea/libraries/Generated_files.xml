@@ -9,6 +9,7 @@
         <item url="file://$PROJECT_DIR$/services/passport-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/controlPanel-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/getUsers-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/containers/user-list-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_posts-compiled.js" />
         <item url="file://$PROJECT_DIR$/controllers/authentication-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />
@@ -37,6 +38,7 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/src/containers/friends-list-compiled-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/containers/friends-list-compiled-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/components/getUsers-compiled.js" />
       <root url="file://$PROJECT_DIR$/models/user-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_signIn-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/actions/actions_types-compiled.js" />
@@ -44,6 +46,7 @@
       <root url="file://$PROJECT_DIR$/services/passport-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/controlPanel-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/getUsers-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/containers/user-list-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_posts-compiled.js" />
       <root url="file://$PROJECT_DIR$/controllers/authentication-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />

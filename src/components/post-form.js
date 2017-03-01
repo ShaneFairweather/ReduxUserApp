@@ -28,7 +28,6 @@ class PostForm extends Component {
 
 
 function mapStateToProps(state) {
-    console.log(state.signin)
     return {
         authenticated: state.signin.authenticated
     }

@@ -35,6 +35,7 @@ class PostList extends Component {
 
 // Add props to PostList container
 function mapStateToProps(state) {
+    console.log(state);
     return {
         posts: state.posts
     };

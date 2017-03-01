@@ -72,9 +72,21 @@ function signoutUser() {
     };
 }
 
+// export function getUsers() {
+//     // const request = axios.get(`${ROOT_URL}/users`);
+//     return function(dispatch) {
+//         axios.get(`${ROOT_URL}/users`)
+//         .then(response =>  {
+//             dispatch({ type: GET_USERS, payload: response.data });
+//             console.log("------------");
+//             console.log(response.data)
+//             console.log("------------");
+//         })
+//     };
+// }
+
 function getUsers() {
     var request = _axios2.default.get(ROOT_URL + '/users');
-
     return {
         type: _actions_types.GET_USERS,
         payload: request

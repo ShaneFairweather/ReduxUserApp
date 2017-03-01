@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { Panel, Col, ButtonToolbar, Button, FormGroup, Form, ControlLabel } from 'react-bootstrap';
+import { Panel, Col, ButtonToolbar, Button, FormGroup, Form } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions_index';
 
@@ -46,6 +46,7 @@ class Register extends Component {
         // this.props.signinUser({ email, password });
         console.log(formProps);
         this.props.signupUser(formProps);
+        this.props.getUsers();
     }
 
     renderAlert() {

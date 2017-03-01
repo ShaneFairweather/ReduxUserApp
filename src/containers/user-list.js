@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import { Panel } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import * as actions from '../actions/actions_index';
-import axios from 'axios';
+import { bindActionCreators } from 'redux';
+// import * as actions from '../actions/actions_index';
+import { getUsers } from '../actions/actions_index';
 
 class UserList extends Component {
     componentWillMount() {
         this.props.getUsers();
+        // console.log(this.props.dispatch);
+        // console.log("=====componentwillmount======")
+        // console.log(this.props.getUsers())
+        // console.log("=====componentwillmount======")
+
     }
+
 
     renderUsers() {
         return this.props.users.map((user) => {
             return (
-                <li key={user.id}>
+                <li key={user._id}>
                     {user.username}
                 </li>
             )
@@ -31,9 +38,15 @@ class UserList extends Component {
     }
 }
 
+
 function mapStateToProps(state) {
-    console.log(state);
-    return { users: state.users.all };
+    console.log(state.users);
+    return { users: state.users.all }
 }
 
-export default connect(mapStateToProps, actions)(UserList);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ getUsers }, dispatch);
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserList);

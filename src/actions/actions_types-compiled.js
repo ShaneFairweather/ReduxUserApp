@@ -7,5 +7,6 @@ var AUTH_USER = exports.AUTH_USER = 'auth_user';
 var UNAUTH_USER = exports.UNAUTH_USER = 'unauth_user';
 var AUTH_ERROR = exports.AUTH_ERROR = 'auth_error';
 var GET_USERS = exports.GET_USERS = 'get_users';
+var GET_POSTS = exports.GET_POSTS = 'get_posts';
 
 //# sourceMappingURL=actions_types-compiled.js.map

@@ -25,11 +25,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var rootReducer = (0, _redux.combineReducers)({
     form: _reduxForm.reducer,
     posts: _reducer_posts2.default,
-    // postList: PostListReducer,
     signin: _reducer_signIn2.default,
     users: _reducer_users2.default
 });
-// import PostListReducer from './reducer_postList';
+
 exports.default = rootReducer;
 
 //# sourceMappingURL=reducer_index-compiled.js.map

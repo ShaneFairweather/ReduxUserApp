@@ -4,7 +4,8 @@ import {
     AUTH_USER,
     UNAUTH_USER,
     AUTH_ERROR,
-    GET_USERS
+    GET_USERS,
+    GET_POSTS
 } from './actions_types';
 
 const ROOT_URL = 'http://localhost:3030';
@@ -35,6 +36,7 @@ export function signupUser({email, username, password}) {
             .then(response => {
                 dispatch({ type: AUTH_USER });
                 localStorage.setItem('token', response.data.token);
+                // dispatch({ type: GET_USERS });
                 browserHistory.push('/');
             })
             .catch(response => dispatch(authError('An account with that email already exists')))
@@ -73,6 +75,15 @@ export function getUsers() {
     const request = axios.get(`${ROOT_URL}/users`);
     return {
         type: GET_USERS,
+        payload: request
+    }
+}
+
+export function getPosts() {
+    const request = axios.get(`${ROOT_URL}/posts`);
+    // console.log(payload);
+    return {
+        type: GET_POSTS,
         payload: request
     }
 }

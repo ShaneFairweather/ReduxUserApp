@@ -3,6 +3,7 @@
 var jwt = require('jwt-simple');
 var User = require('../models/user.js');
 var config = require('../config');
+var gravatar = require('gravatar');
 
 function tokenForUser(user) {
     var timestamp = new Date().getTime();
@@ -18,6 +19,7 @@ exports.signup = function (req, res, next) {
     var email = req.body.email;
     var username = req.body.username;
     var password = req.body.password;
+    // const avatar = email.trim().toLowerCase()
 
     if (!email || !password) {
         return res.status(422).send({ error: 'You must provide an email address and a password' });
@@ -38,7 +40,8 @@ exports.signup = function (req, res, next) {
         var user = new User({
             email: email,
             username: username,
-            password: password
+            password: password,
+            avatar: gravatar.url(email, { s: '100', r: 'x', d: 'retro' }, true)
         });
 
         user.save(function (err) {

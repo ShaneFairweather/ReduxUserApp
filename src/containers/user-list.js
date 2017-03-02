@@ -20,12 +20,13 @@ class UserList extends Component {
         return this.props.users.map((user) => {
             return (
                 <li key={user._id}>
+                    <img src={user.avatar} alt="userImg"  height="50" />
                     {user.username}
                 </li>
             )
         })
     }
-
+w
     render() {
         return (
             <Panel>
@@ -40,7 +41,7 @@ class UserList extends Component {
 
 
 function mapStateToProps(state) {
-    console.log(state.users);
+    console.log(state);
     return { users: state.users.all }
 }
 

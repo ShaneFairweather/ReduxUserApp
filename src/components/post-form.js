@@ -66,4 +66,4 @@ PostForm = reduxForm({
     form: 'postForm',
 })(PostForm);
 
-export default connect(mapStateToProps)(PostForm);
+export default connect(mapStateToProps, actions)(PostForm);

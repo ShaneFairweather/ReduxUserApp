@@ -19,18 +19,12 @@ class PostList extends Component {
     }
 
     renderList() {
+        console.log(this.props.posts);
         return this.props.posts.map((post) => {
             return (
                 <Panel key={post._id} className='post'>
                     <h3>{post.author}</h3>
                     <p>{post.content}</p>
-                    <ButtonToolbar>
-                        <Button
-                            onClick={() => this.props.addPost(post)}
-                            className="btn">
-                            Add Post
-                        </Button>
-                    </ButtonToolbar>
                 </Panel>
             )
         })

@@ -7,8 +7,6 @@ export default function(state = INITIAL_STATE, action) {
     switch(action.type) {
         case GET_POSTS:
             return { ...state, all: action.payload.data };
-        case ADD_POST:
-            return { ...state, all: action.payload.data };
         default:
             return state;
     }

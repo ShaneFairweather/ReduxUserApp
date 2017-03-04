@@ -4,8 +4,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var postSchema = new Schema({
-    author: { type: String },
-    content: { type: String, required: true }
+    // author: {type: Schema.Types.ObjectId, ref: 'User'},
+    author: String,
+    // content: {type: String, required: true}
+    content: String
 });
 
 var Post = mongoose.model('Post', postSchema);

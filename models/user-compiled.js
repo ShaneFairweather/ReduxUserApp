@@ -6,9 +6,10 @@ var bcrypt = require('bcrypt-nodejs');
 
 var userSchema = new Schema({
     email: { type: String, unique: true, lowercase: true },
-    username: String,
+    username: { type: String, unique: true },
     password: String,
-    avatar: String
+    avatar: String,
+    posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }]
 });
 
 //Encrypt on save hook
@@ -47,7 +48,7 @@ userSchema.methods.comparePasswords = function (candidatePassword, callback) {
     });
 };
 
-var ModelClass = mongoose.model('user', userSchema);
+var ModelClass = mongoose.model('User', userSchema);
 
 module.exports = ModelClass;
 

@@ -18,6 +18,7 @@ exports.signup = function(req, res, next) {
     const username = req.body.username;
     const password = req.body.password;
     // const avatar = email.trim().toLowerCase()
+    const posts = req.body.posts;
 
     if(!email || !password) {
         return res.status(422).send({error: 'You must provide an email address and a password'})
@@ -39,7 +40,8 @@ exports.signup = function(req, res, next) {
             email: email,
             username: username,
             password: password,
-            avatar: gravatar.url(email, {s: '100', r: 'x', d: 'retro'}, true)
+            avatar: gravatar.url(email, {s: '100', r: 'x', d: 'retro'}, true),
+            posts: posts
         });
 
         user.save(function(err) {

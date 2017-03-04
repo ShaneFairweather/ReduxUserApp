@@ -9,6 +9,7 @@ exports.authError = authError;
 exports.signoutUser = signoutUser;
 exports.getUsers = getUsers;
 exports.getPosts = getPosts;
+exports.addPost = addPost;
 
 var _axios = require('axios');
 
@@ -51,7 +52,6 @@ function signupUser(_ref2) {
         _axios2.default.post(ROOT_URL + '/signup', { email: email, username: username, password: password }).then(function (response) {
             dispatch({ type: _actions_types.AUTH_USER });
             localStorage.setItem('token', response.data.token);
-            // dispatch({ type: GET_USERS });
             _reactRouter.browserHistory.push('/');
         }).catch(function (response) {
             return dispatch(authError('An account with that email already exists'));
@@ -74,21 +74,9 @@ function signoutUser() {
     };
 }
 
-// export function getUsers() {
-//     // const request = axios.get(`${ROOT_URL}/users`);
-//     return function(dispatch) {
-//         axios.get(`${ROOT_URL}/users`)
-//         .then(response =>  {
-//             dispatch({ type: GET_USERS, payload: response.data });
-//             console.log("------------");
-//             console.log(response.data)
-//             console.log("------------");
-//         })
-//     };
-// }
-
 function getUsers() {
     var request = _axios2.default.get(ROOT_URL + '/users');
+    console.log(request);
     return {
         type: _actions_types.GET_USERS,
         payload: request
@@ -100,6 +88,18 @@ function getPosts() {
     // console.log(payload);
     return {
         type: _actions_types.GET_POSTS,
+        payload: request
+    };
+}
+
+function addPost(_ref3) {
+    var author = _ref3.author,
+        content = _ref3.content;
+
+    var request = _axios2.default.post(ROOT_URL + '/addpost', { author: author, content: content });
+    console.log(request);
+    return {
+        type: _actions_types.ADD_POST,
         payload: request
     };
 }

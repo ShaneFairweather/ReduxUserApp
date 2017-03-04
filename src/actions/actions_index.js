@@ -5,7 +5,8 @@ import {
     UNAUTH_USER,
     AUTH_ERROR,
     GET_USERS,
-    GET_POSTS
+    GET_POSTS,
+    ADD_POST
 } from './actions_types';
 
 const ROOT_URL = 'http://localhost:3030';
@@ -36,7 +37,6 @@ export function signupUser({email, username, password}) {
             .then(response => {
                 dispatch({ type: AUTH_USER });
                 localStorage.setItem('token', response.data.token);
-                // dispatch({ type: GET_USERS });
                 browserHistory.push('/');
             })
             .catch(response => dispatch(authError('An account with that email already exists')))
@@ -58,21 +58,10 @@ export function signoutUser() {
     }
 }
 
-// export function getUsers() {
-//     // const request = axios.get(`${ROOT_URL}/users`);
-//     return function(dispatch) {
-//         axios.get(`${ROOT_URL}/users`)
-//         .then(response =>  {
-//             dispatch({ type: GET_USERS, payload: response.data });
-//             console.log("------------");
-//             console.log(response.data)
-//             console.log("------------");
-//         })
-//     };
-// }
 
 export function getUsers() {
     const request = axios.get(`${ROOT_URL}/users`);
+    console.log(request);
     return {
         type: GET_USERS,
         payload: request
@@ -84,6 +73,15 @@ export function getPosts() {
     // console.log(payload);
     return {
         type: GET_POSTS,
+        payload: request
+    }
+}
+
+export function addPost({author, content}) {
+    const request = axios.post(`${ROOT_URL}/addpost`, {author, content});
+    console.log(request);
+    return {
+        type: ADD_POST,
         payload: request
     }
 }

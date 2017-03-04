@@ -4,15 +4,17 @@ import { addPost } from '../actions/actions_index';
 import { bindActionCreators } from 'redux';
 import { Button, ButtonToolbar, Panel }  from 'react-bootstrap';
 import * as actions from '../actions/actions_index';
+import { reduxForm, Field } from 'redux-form';
+
 
 
 class PostList extends Component {
 
     componentWillMount() {
         this.props.getPosts();
-        console.log("=====componentwillmount======")
-        console.log(this.props.getPosts())
-        console.log("=====componentwillmount======")
+        // console.log("=====componentwillmount======")
+        // console.log(this.props.getPosts())
+        // console.log("=====componentwillmount======")
 
     }
 

@@ -35,8 +35,36 @@ module.exports = function(app) {
         })
     });
 
-    app.get("/users/:id", function(req, res) {
-        res.send("These are the user screens");
-    })
+    // app.get("/users/:id", function(req, res) {
+    //     res.send("These are the user screens");
+    // })
+
+    app.post('/addpost', function(req, res, next) {
+        console.log(req.body);
+        const author = req.body.author;
+        const content = req.body.content;
+        // const author = "testing testing";
+        // const content = "testing final";
+
+        // if(!author || !content) {
+        //     return res.status(422).send({error: 'You must provide post content'})
+        // }
+
+            const post = new Post({
+                author: author,
+                content: content,
+            });
+
+            post.save(function(err) {
+                if(err) {
+                    return next(err);
+                }
+                //creation success response
+                // res.send("Post added");
+                res.send(post);
+                // res.json({ token: tokenForUser(user) });
+            });
+        });
+
 }
 

@@ -11,7 +11,7 @@ const User = require('./models/user');
 
 mongoose.connect('mongodb://localhost:auth/auth');
 
-// User.create({
+// Post.create(req.body.post, function(err, comment) {
 //     email: "123@123.com",
 //     username: "newguy",
 //     password: "123"

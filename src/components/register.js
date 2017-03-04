@@ -24,8 +24,8 @@ const validate = values => {
     }
     if (!values.username) {
         errors.username = 'Username Required'
-    } else if (values.username.length < 4) {
-        errors.username = "Username must be at least 4 characters"
+    } else if (values.username.length < 3) {
+        errors.username = "Username must be at least 3 characters"
     }
     if (!values.password) {
         errors.password = 'Password Required'
@@ -44,7 +44,6 @@ const validate = values => {
 class Register extends Component {
     handleFormSubmit(formProps) {
         // this.props.signinUser({ email, password });
-        console.log(formProps);
         this.props.signupUser(formProps);
         this.props.getUsers();
     }
@@ -115,7 +114,9 @@ class Register extends Component {
 }
 
 function mapStateToProps(state) {
-    return { errorMessage: state.signin.error }
+    return { errorMessage: state.signin.error,
+             users: state.users.all
+    }
 }
 
 Register = reduxForm({

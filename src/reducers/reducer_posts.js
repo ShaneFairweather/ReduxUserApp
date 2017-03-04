@@ -1,11 +1,13 @@
-import { GET_POSTS } from '../actions/actions_types';
+import { GET_POSTS, ADD_POST } from '../actions/actions_types';
 
 const INITIAL_STATE = { all: [] };
 
 export default function(state = INITIAL_STATE, action) {
-    // console.log(action.payload)
+    console.log(action.payload)
     switch(action.type) {
         case GET_POSTS:
+            return { ...state, all: action.payload.data };
+        case ADD_POST:
             return { ...state, all: action.payload.data };
         default:
             return state;

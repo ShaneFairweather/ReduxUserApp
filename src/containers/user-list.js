@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Panel } from 'react-bootstrap';
+import { Panel, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // import * as actions from '../actions/actions_index';
@@ -8,21 +8,29 @@ import { getUsers } from '../actions/actions_index';
 class UserList extends Component {
     componentWillMount() {
         this.props.getUsers();
-        // console.log(this.props.dispatch);
-        // console.log("=====componentwillmount======")
-        // console.log(this.props.getUsers())
-        // console.log("=====componentwillmount======")
-
     }
 
+    componentDidMount() {
+        this.props.getUsers();
+    }
+
+
+
+    // componentWillReceiveProps(nextProps){
+    //     console.log(nextProps);
+    //     if(nextProps.value !== this.props.value)
+    //         this.props.getUsers();
+    // }
 
     renderUsers() {
         return this.props.users.map((user) => {
             return (
-                <li key={user._id}>
-                    <img src={user.avatar} alt="userImg"  height="50" />
-                    {user.username}
-                </li>
+                <ListGroupItem key={user._id}>
+                    <div>
+                        <img className="userListIcon" src={user.avatar} alt="userImg"  height="25" />
+                        {user.username}
+                    </div>
+                </ListGroupItem>
             )
         })
     }
@@ -31,9 +39,9 @@ w
         return (
             <Panel>
                 <h3>Users</h3>
-                <ul>
+                <ListGroup>
                     {this.renderUsers()}
-                </ul>
+                </ListGroup>
             </Panel>
         )
     }

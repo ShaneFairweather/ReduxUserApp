@@ -80,6 +80,9 @@ input {
 .form-group span {
   color: red; }
 
+.userListIcon {
+  border-radius: 4px; }
+
 .footer {
   text-align: center;
   position: absolute;

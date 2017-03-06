@@ -46,6 +46,8 @@ class Register extends Component {
         // this.props.signinUser({ email, password });
         this.props.signupUser(formProps);
         this.props.getUsers();
+        this.props.getUsers();
+
     }
 
     renderAlert() {

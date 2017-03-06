@@ -7,10 +7,10 @@ class Header extends Component {
     renderLinks() {
         if(this.props.authenticated) {
             return ([
-                <Nav pullRight>
+                <Nav pullRight key="signout" id="signout">
                     <NavItem eventKey={3}><Link to="/signout">Sign out</Link></NavItem>
                 </Nav>,
-                <Nav pullRight>
+                <Nav pullRight key="greetUser" id="greetUser">
                     <NavItem eventKey={2}>Hello, <Link to="/settings">User</Link>!</NavItem>
                 </Nav>
 
@@ -42,7 +42,7 @@ class Header extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state)
+    // console.log(state)
     return {
         authenticated: state.signin.authenticated
     }

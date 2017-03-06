@@ -18,10 +18,10 @@ const Account = () => {
             <h4>Change Password</h4>
             <Form>
                 <FormGroup controlId="formInlineName">
-                    <FormControl componentClass="input" placeholder="New password" />
+                    <FormControl componentClass="input" placeholder="New password" type="password" />
                 </FormGroup>
                 <FormGroup controlId="formInlineName">
-                    <FormControl componentClass="input" placeholder="Repeat password" />
+                    <FormControl componentClass="input" placeholder="Repeat password" type="password" />
                 </FormGroup>
                 <ButtonToolbar>
                     <Button type="submit">

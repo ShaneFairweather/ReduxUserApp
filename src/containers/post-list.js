@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addPost } from '../actions/actions_index';
+// import { addPost } from '../actions/actions_index';
 import { bindActionCreators } from 'redux';
 import { Button, ButtonToolbar, Panel }  from 'react-bootstrap';
 import * as actions from '../actions/actions_index';
-import { reduxForm, Field } from 'redux-form';
+// import { reduxForm, Field } from 'redux-form';
 
 
 
 class PostList extends Component {
 
-    componentWillMount() {
+
+    componentWillMount(newProps) {
         this.props.getPosts();
         // console.log("=====componentwillmount======")
         // console.log(this.props.getPosts())
         // console.log("=====componentwillmount======")
-
     }
 
+    // componentWillReceiveProps() {
+    //     this.props.getPosts();
+    // }
+
     renderList() {
-        console.log(this.props.posts);
+        // console.log(this.props.posts);
         return this.props.posts.map((post) => {
             return (
                 <Panel key={post._id} className='post'>
@@ -42,9 +46,9 @@ class PostList extends Component {
 
 // Add props to PostList container
 function mapStateToProps(state) {
-    console.log(state.posts);
+    // console.log(state.posts);
     return {
-        posts: state.posts.all
+        posts: state.posts.all.reverse()
     };
 }
 

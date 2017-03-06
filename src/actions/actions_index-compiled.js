@@ -9,6 +9,7 @@ exports.authError = authError;
 exports.signoutUser = signoutUser;
 exports.getUsers = getUsers;
 exports.getPosts = getPosts;
+exports.updatePosts = updatePosts;
 exports.addPost = addPost;
 
 var _axios = require('axios');
@@ -76,7 +77,7 @@ function signoutUser() {
 
 function getUsers() {
     var request = _axios2.default.get(ROOT_URL + '/users');
-    console.log(request);
+    // console.log(request);
     return {
         type: _actions_types.GET_USERS,
         payload: request
@@ -85,11 +86,16 @@ function getUsers() {
 
 function getPosts() {
     var request = _axios2.default.get(ROOT_URL + '/posts');
-    // console.log(payload);
+    console.log(request);
+    console.log("get posts has been called!");
     return {
         type: _actions_types.GET_POSTS,
         payload: request
     };
+}
+
+function updatePosts() {
+    getPosts();
 }
 
 function addPost(_ref3) {
@@ -97,7 +103,7 @@ function addPost(_ref3) {
         content = _ref3.content;
 
     var request = _axios2.default.post(ROOT_URL + '/addpost', { author: author, content: content });
-    console.log(request);
+    // console.log(request);
     return {
         type: _actions_types.ADD_POST,
         payload: request

@@ -80,8 +80,13 @@ input {
 .form-group span {
   color: red; }
 
-.userListIcon {
-  border-radius: 4px; }
+#addPost {
+  height: 104px; }
+
+#userList {
+  box-shadow: none; }
+  #userList img {
+    border-radius: 3px; }
 
 .footer {
   text-align: center;

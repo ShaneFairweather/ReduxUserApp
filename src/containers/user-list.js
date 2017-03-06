@@ -28,18 +28,18 @@ class UserList extends Component {
                 <ListGroupItem key={user._id}>
                     <div>
                         <img className="userListIcon" src={user.avatar} alt="userImg"  height="25" />
-                        {user.username}
+                        &nbsp; {user.username}
                     </div>
                 </ListGroupItem>
             )
         })
     }
-w
+
     render() {
         return (
             <Panel>
                 <h3>Users</h3>
-                <ListGroup>
+                <ListGroup id="userList">
                     {this.renderUsers()}
                 </ListGroup>
             </Panel>

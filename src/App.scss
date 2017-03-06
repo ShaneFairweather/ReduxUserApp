@@ -119,8 +119,15 @@ input {
   color: red;
 }
 
-.userListIcon {
-  border-radius: 4px;
+#addPost {
+  height: 104px;
+}
+
+#userList {
+  box-shadow: none;
+  img {
+    border-radius: 3px;
+  }
 }
 
 

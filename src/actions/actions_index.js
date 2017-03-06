@@ -61,7 +61,7 @@ export function signoutUser() {
 
 export function getUsers() {
     const request = axios.get(`${ROOT_URL}/users`);
-    console.log(request);
+    // console.log(request);
     return {
         type: GET_USERS,
         payload: request
@@ -70,16 +70,21 @@ export function getUsers() {
 
 export function getPosts() {
     const request = axios.get(`${ROOT_URL}/posts`);
-    // console.log(payload);
+    console.log(request);
+    console.log("get posts has been called!");
     return {
         type: GET_POSTS,
         payload: request
     }
 }
 
+export function updatePosts() {
+    getPosts();
+}
+
 export function addPost({author, content}) {
     const request = axios.post(`${ROOT_URL}/addpost`, {author, content});
-    console.log(request);
+    // console.log(request);
     return {
         type: ADD_POST,
         payload: request

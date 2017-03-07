@@ -9,8 +9,9 @@ exports.authError = authError;
 exports.signoutUser = signoutUser;
 exports.getUsers = getUsers;
 exports.getPosts = getPosts;
-exports.updatePosts = updatePosts;
 exports.addPost = addPost;
+exports.updateUsers = updateUsers;
+exports.updatePosts = updatePosts;
 
 var _axios = require('axios');
 
@@ -94,19 +95,40 @@ function getPosts() {
     };
 }
 
-function updatePosts() {
-    getPosts();
-}
-
 function addPost(_ref3) {
     var author = _ref3.author,
+        avatar = _ref3.avatar,
         content = _ref3.content;
 
-    var request = _axios2.default.post(ROOT_URL + '/addpost', { author: author, content: content });
+    var request = _axios2.default.post(ROOT_URL + '/addpost', { author: author, avatar: avatar, content: content });
     // console.log(request);
     return {
         type: _actions_types.ADD_POST,
         payload: request
+    };
+}
+
+function updateUsers(_ref4) {
+    var email = _ref4.email,
+        username = _ref4.username,
+        password = _ref4.password;
+
+    return function (dispatch) {
+        return dispatch(signupUser({ email: email, username: username, password: password })).then(function () {
+            return dispatch(getUsers());
+        });
+    };
+}
+
+function updatePosts(_ref5) {
+    var author = _ref5.author,
+        avatar = _ref5.avatar,
+        content = _ref5.content;
+
+    return function (dispatch) {
+        return dispatch(addPost({ author: author, avatar: avatar, content: content })).then(function () {
+            return dispatch(getPosts());
+        });
     };
 }
 

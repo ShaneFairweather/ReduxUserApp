@@ -6,7 +6,8 @@ import {
     AUTH_ERROR,
     GET_USERS,
     GET_POSTS,
-    ADD_POST
+    ADD_POST,
+    UPDATE_POSTS
 } from './actions_types';
 
 const ROOT_URL = 'http://localhost:3030';
@@ -78,15 +79,37 @@ export function getPosts() {
     }
 }
 
-export function updatePosts() {
-    getPosts();
-}
-
-export function addPost({author, content}) {
-    const request = axios.post(`${ROOT_URL}/addpost`, {author, content});
+export function addPost({author, avatar, content}) {
+    const request = axios.post(`${ROOT_URL}/addpost`, {author, avatar, content});
     // console.log(request);
     return {
         type: ADD_POST,
         payload: request
+    }
+}
+
+
+export function updateUsers({email, username, password}) {
+    return (dispatch) => {
+        return dispatch(
+            signupUser({email, username, password})
+        ).then(() => {
+            return dispatch(
+                getUsers()
+            )
+        })
+    }
+}
+
+
+export function updatePosts({author, avatar, content}) {
+    return (dispatch) => {
+        return dispatch(
+            addPost({author, avatar, content})
+        ).then(() => {
+            return dispatch(
+                getPosts()
+            )
+        })
     }
 }

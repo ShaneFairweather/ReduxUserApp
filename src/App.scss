@@ -130,6 +130,26 @@ input {
   }
 }
 
+.post {
+  img {
+    float: left;
+    margin-right: 10px;
+    height: 60px;
+  }
+  .postAuthor {
+    font-size: 1.8em;
+  }
+  .postBody {
+    clear: both;
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  .innerPost {
+    padding: 10px;
+  }
+
+}
+
 
 //=============Account==============//
 

@@ -5,7 +5,7 @@ var gravatar = require('gravatar');
 
 function tokenForUser(user) {
     const timestamp = new Date().getTime();
-    return jwt.encode({ sub: user.id, iat: timestamp }, config.secret);
+    return jwt.encode({ id: user.id, username: user.username, avatar: user.avatar, iat: timestamp }, config.secret);
 }
 
 exports.signin = function(req, res, next) {

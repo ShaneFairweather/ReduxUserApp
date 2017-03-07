@@ -10,5 +10,6 @@ var GET_USERS = exports.GET_USERS = 'get_users';
 var GET_POSTS = exports.GET_POSTS = 'get_posts';
 var ADD_POST = exports.ADD_POST = 'add_post';
 var ACCOUNT_SAVE_SUCCESS = exports.ACCOUNT_SAVE_SUCCESS = 'account_save_success';
+var UPDATE_POSTS = exports.UPDATE_POSTS = 'update_posts';
 
 //# sourceMappingURL=actions_types-compiled.js.map

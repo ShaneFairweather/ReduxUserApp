@@ -7,7 +7,8 @@ var postSchema = new Schema({
     // author: {type: Schema.Types.ObjectId, ref: 'User'},
     author: String,
     // content: {type: String, required: true}
-    content: String
+    content: String,
+    avatar: String
 });
 
 var Post = mongoose.model('Post', postSchema);

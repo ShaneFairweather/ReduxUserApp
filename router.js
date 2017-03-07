@@ -43,6 +43,7 @@ module.exports = function(app) {
         console.log(req.body);
         const author = req.body.author;
         const content = req.body.content;
+        const avatar = req.body.avatar;
         // const author = "testing testing";
         // const content = "testing final";
 
@@ -53,6 +54,7 @@ module.exports = function(app) {
             const post = new Post({
                 author: author,
                 content: content,
+                avatar: avatar
             });
 
             post.save(function(err) {

@@ -11,24 +11,23 @@ import * as actions from '../actions/actions_index';
 class PostList extends Component {
 
 
-    componentWillMount(newProps) {
+    componentWillMount() {
         this.props.getPosts();
-        // console.log("=====componentwillmount======")
-        // console.log(this.props.getPosts())
-        // console.log("=====componentwillmount======")
     }
 
-    // componentWillReceiveProps() {
-    //     this.props.getPosts();
-    // }
-
     renderList() {
-        // console.log(this.props.posts);
+        const date = new Date().toDateString();
         return this.props.posts.map((post) => {
             return (
                 <Panel key={post._id} className='post'>
-                    <h3>{post.author}</h3>
-                    <p>{post.content}</p>
+                    <div className="innerPost">
+                        <div>
+                            <img className="postAvatar" src={post.avatar} alt="userAvatar" />
+                            <h4 className="postAuthor">{post.author}</h4>
+                            <small>{date}</small>
+                        </div>
+                        <div className="postBody">{post.content}</div>
+                    </div>
                 </Panel>
             )
         })
@@ -46,7 +45,6 @@ class PostList extends Component {
 
 // Add props to PostList container
 function mapStateToProps(state) {
-    // console.log(state.posts);
     return {
         posts: state.posts.all.reverse()
     };

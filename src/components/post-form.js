@@ -4,6 +4,7 @@ import { FormControl }  from 'react-bootstrap';
 import { reduxForm, Field, reset } from 'redux-form';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions_index';
+import jwtDecode from 'jwt-decode';
 
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
@@ -19,11 +20,13 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
 
 class PostForm extends Component {
     handleFormSubmit(formProps) {
-        // this.props.signinUser({ email, password });
-        this.props.getPosts();
-        this.props.addPost(formProps);
-        this.props.getPosts();
-        document.getElementById('postForm')
+        const {resetForm} = this.props;
+        const decoded = jwtDecode(localStorage.token)
+        console.log(decoded);
+        formProps.author = decoded.username;
+        formProps.avatar = decoded.avatar;
+        console.log(formProps);
+        this.props.updatePosts(formProps);
     }
 
     render() {

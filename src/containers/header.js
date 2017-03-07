@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import jwtDecode from 'jwt-decode';
 
 class Header extends Component {
     renderLinks() {
         if(this.props.authenticated) {
+            const decoded = jwtDecode(localStorage.token)
+            console.log(decoded);
             return ([
                 <Nav pullRight key="signout" id="signout">
                     <NavItem eventKey={3}><Link to="/signout">Sign out</Link></NavItem>
                 </Nav>,
                 <Nav pullRight key="greetUser" id="greetUser">
-                    <NavItem eventKey={2}>Hello, <Link to="/settings">User</Link>!</NavItem>
+                    <NavItem eventKey={2}>Hello, <Link to="/settings">{decoded.username}</Link>!</NavItem>
                 </Nav>
 
             ])

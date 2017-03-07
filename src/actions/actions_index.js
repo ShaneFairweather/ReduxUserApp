@@ -7,7 +7,8 @@ import {
     GET_USERS,
     GET_POSTS,
     ADD_POST,
-    UPDATE_POSTS
+    UPDATE_POSTS,
+    CHECK_AUTH
 } from './actions_types';
 
 const ROOT_URL = 'http://localhost:3030';
@@ -17,10 +18,10 @@ export function signinUser({ email, password }) {
         //submit email/pw to server
         axios.post(`${ROOT_URL}/signin`, { email, password })
             .then(response => {
-                //update state to reflect authentication
-                dispatch({ type: AUTH_USER });
                 //save jwt token
                 localStorage.setItem('token', response.data.token);
+                //update state to reflect authentication
+                dispatch({ type: AUTH_USER });
                 //redirect route
                 browserHistory.push('/');
             })
@@ -36,8 +37,8 @@ export function signupUser({email, username, password}) {
     return function(dispatch) {
         axios.post(`${ROOT_URL}/signup`, {email, username, password})
             .then(response => {
-                dispatch({ type: AUTH_USER });
                 localStorage.setItem('token', response.data.token);
+                dispatch({ type: AUTH_USER });
                 browserHistory.push('/');
             })
             .catch(response => dispatch(authError('An account with that email already exists')))
@@ -58,6 +59,20 @@ export function signoutUser() {
         browserHistory.push('/');
     }
 }
+
+
+export function checkAuth({email, password}) {
+    return (dispatch) => {
+        return dispatch(
+            signinUser({email, password})
+        ).then(() => {
+            return dispatch(
+                console.log("checked auth")
+            )
+        })
+    }
+}
+
 
 
 export function getUsers() {

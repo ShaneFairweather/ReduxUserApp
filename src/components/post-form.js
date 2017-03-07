@@ -6,6 +6,9 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/actions_index';
 import jwtDecode from 'jwt-decode';
 
+const emptyForm = (result, dispatch) =>
+    dispatch(reset('postForm'));
+
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
     <div>
@@ -69,6 +72,7 @@ function mapStateToProps(state) {
 
 PostForm = reduxForm({
     form: 'postForm',
+    onSubmitSuccess: emptyForm,
 })(PostForm);
 
 export default connect(mapStateToProps, actions)(PostForm);

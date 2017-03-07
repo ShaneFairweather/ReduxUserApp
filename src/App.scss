@@ -66,8 +66,12 @@ body {
 
 #portrait {
   cursor: default;
+  padding: 20px;
   &:hover {
     background-color: white;
+  }
+  img {
+    height: 200px;
   }
 }
 
@@ -150,6 +154,12 @@ input {
 
 }
 
+
+.loginControlPanel {
+  .panel-body {
+    padding: 80px 20px;
+  }
+}
 
 //=============Account==============//
 

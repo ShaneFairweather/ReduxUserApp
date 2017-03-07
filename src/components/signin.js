@@ -16,6 +16,7 @@ class Signin extends Component {
     handleFormSubmit({ email, password }) {
         // console.log(email);
         this.props.signinUser({ email, password });
+        // this.props.checkAuth({ email, password });
 
     }
 

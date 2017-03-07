@@ -7,6 +7,7 @@ exports.signinUser = signinUser;
 exports.signupUser = signupUser;
 exports.authError = authError;
 exports.signoutUser = signoutUser;
+exports.checkAuth = checkAuth;
 exports.getUsers = getUsers;
 exports.getPosts = getPosts;
 exports.addPost = addPost;
@@ -32,10 +33,10 @@ function signinUser(_ref) {
     return function (dispatch) {
         //submit email/pw to server
         _axios2.default.post(ROOT_URL + '/signin', { email: email, password: password }).then(function (response) {
-            //update state to reflect authentication
-            dispatch({ type: _actions_types.AUTH_USER });
             //save jwt token
             localStorage.setItem('token', response.data.token);
+            //update state to reflect authentication
+            dispatch({ type: _actions_types.AUTH_USER });
             //redirect route
             _reactRouter.browserHistory.push('/');
         }).catch(function () {
@@ -52,8 +53,8 @@ function signupUser(_ref2) {
 
     return function (dispatch) {
         _axios2.default.post(ROOT_URL + '/signup', { email: email, username: username, password: password }).then(function (response) {
-            dispatch({ type: _actions_types.AUTH_USER });
             localStorage.setItem('token', response.data.token);
+            dispatch({ type: _actions_types.AUTH_USER });
             _reactRouter.browserHistory.push('/');
         }).catch(function (response) {
             return dispatch(authError('An account with that email already exists'));
@@ -76,6 +77,17 @@ function signoutUser() {
     };
 }
 
+function checkAuth(_ref3) {
+    var email = _ref3.email,
+        password = _ref3.password;
+
+    return function (dispatch) {
+        return dispatch(signinUser({ email: email, password: password })).then(function () {
+            return dispatch(console.log("checked auth"));
+        });
+    };
+}
+
 function getUsers() {
     var request = _axios2.default.get(ROOT_URL + '/users');
     // console.log(request);
@@ -95,10 +107,10 @@ function getPosts() {
     };
 }
 
-function addPost(_ref3) {
-    var author = _ref3.author,
-        avatar = _ref3.avatar,
-        content = _ref3.content;
+function addPost(_ref4) {
+    var author = _ref4.author,
+        avatar = _ref4.avatar,
+        content = _ref4.content;
 
     var request = _axios2.default.post(ROOT_URL + '/addpost', { author: author, avatar: avatar, content: content });
     // console.log(request);
@@ -108,10 +120,10 @@ function addPost(_ref3) {
     };
 }
 
-function updateUsers(_ref4) {
-    var email = _ref4.email,
-        username = _ref4.username,
-        password = _ref4.password;
+function updateUsers(_ref5) {
+    var email = _ref5.email,
+        username = _ref5.username,
+        password = _ref5.password;
 
     return function (dispatch) {
         return dispatch(signupUser({ email: email, username: username, password: password })).then(function () {
@@ -120,10 +132,10 @@ function updateUsers(_ref4) {
     };
 }
 
-function updatePosts(_ref5) {
-    var author = _ref5.author,
-        avatar = _ref5.avatar,
-        content = _ref5.content;
+function updatePosts(_ref6) {
+    var author = _ref6.author,
+        avatar = _ref6.avatar,
+        content = _ref6.content;
 
     return function (dispatch) {
         return dispatch(addPost({ author: author, avatar: avatar, content: content })).then(function () {

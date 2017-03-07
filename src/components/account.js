@@ -1,15 +1,19 @@
 import React from 'react';
 import { Panel, Col, ButtonToolbar, Button, FormControl, FormGroup, Form } from 'react-bootstrap';
-import portrait from '../img/portrait.png'
+import portrait from '../img/portrait.png';
+import jwtDecode from 'jwt-decode';
+
 
 
 const Account = () => {
+    const decoded = jwtDecode(localStorage.token);
+    console.log(decoded);
     return (
     <Col xs={12} md={6}>
         <Panel>
             <h2>My Account</h2><hr/><br/>
             <h4>Profile picture</h4>
-            <img src={portrait} alt="profileImg" />
+            <img src={decoded.avatar} alt="profileImg" />
             <ButtonToolbar>
                 <Button type="submit">
                     Upload new picture

@@ -42,9 +42,12 @@ body {
     background-color: #e7e7e7; }
 
 #portrait {
-  cursor: default; }
+  cursor: default;
+  padding: 20px; }
   #portrait:hover {
     background-color: white; }
+  #portrait img {
+    height: 200px; }
 
 .panel-body {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
@@ -100,6 +103,9 @@ input {
   padding: 10px 0; }
 .post .innerPost {
   padding: 10px; }
+
+.loginControlPanel .panel-body {
+  padding: 80px 20px; }
 
 .footer {
   text-align: center;

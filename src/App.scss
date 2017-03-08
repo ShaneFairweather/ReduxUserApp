@@ -1,8 +1,11 @@
+
 .App {
   text-align: center;
 }
 
 $boxShadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+$mainColor: #864da2;
+
 
 html {
   background-color: #F9F9FB;
@@ -16,11 +19,21 @@ body {
   background-color: #F9F9FB;
 }
 
+
 //=============App Container==============//
 
 
 #root, #main {
   background-color: #F9F9FB;
+  button {
+    color: white;
+    background-color: $mainColor;
+    &:hover {
+      color: $mainColor;
+      background-color: white;
+      border-color: $mainColor;
+    }
+  }
 }
 
 //==============Navbar===============//
@@ -109,6 +122,9 @@ body {
   }
   img {
     height: 200px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
   }
 }
 
@@ -221,10 +237,18 @@ input {
   .panel-body {
     .avatarContainer {
       margin: 0 auto;
+      padding:  0 20px;
       img {
-        height: 180px;
+        height: 150px;
         margin: 0 auto;
+        margin-bottom: 20px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
       }
+    }
+    .passwordContainer {
+      padding: 0 20px 10px;
     }
   }
 }

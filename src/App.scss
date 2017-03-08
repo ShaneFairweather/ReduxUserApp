@@ -4,7 +4,9 @@
 }
 
 $boxShadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-$mainColor: #864da2;
+$mainColor: #3b5998;
+$buttonColor: #03a9f4;
+$transition: all 0.4s ease 0s;
 
 
 html {
@@ -17,6 +19,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #F9F9FB;
+  color: #333;
 }
 
 
@@ -27,11 +30,15 @@ body {
   background-color: #F9F9FB;
   button {
     color: white;
-    background-color: $mainColor;
+    background-color: $buttonColor;
+    border-color: $buttonColor;
+    box-shadow: $boxShadow;
     &:hover {
-      color: $mainColor;
+      color: $buttonColor;
       background-color: white;
-      border-color: $mainColor;
+      border: 1px solid $buttonColor;
+      -webkit-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s;
     }
   }
 }
@@ -45,14 +52,30 @@ body {
   //background-color: #724290;
   .navbar-collapse ul li a {
     color: white;
-    &:hover, &:visited {
+    &:visited {
       color: white;
+    }
+    &:hover {
+      color: $buttonColor;
+      transition: $transition;
     }
   }
 }
 
+.rbLink {
+  a {
+    &:hover {
+      color: $buttonColor;
+    }
+  }
+}
+
+.signoutLink {
+  top: 1px;
+}
+
 .navbar-default {
-  background-color: #864da2;
+  background-color: $mainColor;
   border: none;
   .navbar-brand {
     font-family: 'Play', sans-serif;
@@ -62,18 +85,23 @@ body {
       color: white;
     }
     &:hover {
-      color: white;
-      text-shadow: -1px -1px 26px white;
+      color: $buttonColor;
+      //text-shadow: -1px -1px 26px white;
+      transition: $transition;
     }
   }
   a {
     color: white;
     &:hover {
       text-decoration: none;
+      color: $buttonColor;
+      //text-shadow: -1px -1px 26px white;
+      transition: $transition;
     }
   }
   img {
     height: 25px;
+    margin-right: 5px;
   }
 }
 
@@ -111,6 +139,8 @@ body {
   border-radius: 0;
   &:hover {
     background-color: #e7e7e7;
+    //background-color: $buttonColor;
+    color: #333;
   }
 }
 
@@ -156,7 +186,7 @@ body {
       margin-top: 8px;
     }
     a {
-      color: #864da2
+      color: $buttonColor;
     }
   }
 }
@@ -165,7 +195,7 @@ body {
 //=============Forms==============//
 
 
-input {
+.input {
   display: block;
   width: 100%;
   height: 36px;
@@ -202,8 +232,9 @@ input {
   }
   .list-group-item {
     &:hover {
-      color: white;
-      background-color: #864da2;
+      color: #333;
+      //background-color: $buttonColor;
+      background-color: #e7e7e7;
     }
   }
 }

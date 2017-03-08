@@ -14,11 +14,19 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
     <div>
         <label>{label}</label>
         <div>
-            <FormControl id="addPost" componentClass="textarea" {...input} placeholder="Write your post here" type={type}/>
+            <FormControl id="addPost" className="input" componentClass="textarea" {...input} placeholder="Write your post here" type={type}/>
             {touched && error && <span>{error}</span>}
         </div>
     </div>
 )
+
+const validate = values => {
+    const errors = {}
+    if (values.content.length < 1) {
+        errors.content = 'Content Required'
+    }
+    return errors
+}
 
 
 class PostForm extends Component {
@@ -33,8 +41,7 @@ class PostForm extends Component {
     }
 
     render() {
-        const { handleSubmit } = this.props;
-
+        const { handleSubmit, validate } = this.props;
         if(this.props.authenticated) {
             return (
                 <Panel>
@@ -47,8 +54,11 @@ class PostForm extends Component {
                                 component={renderField}
                                 type="textarea"/>
                         </FormGroup>
+                        {validate}
                         <ButtonToolbar>
-                            <Button type="submit">
+                            <Button
+                                className="postSubmit"
+                                type="submit">
                                 Add post
                             </Button>
                         </ButtonToolbar>

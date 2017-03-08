@@ -11,17 +11,17 @@ class Header extends Component {
             console.log(decoded);
             return ([
                 <Nav pullRight key="signout" id="signout">
-                    <NavItem eventKey={3}><Link to="/signout">Sign out</Link></NavItem>
+                    <NavItem eventKey={3} className="rbLink signoutLink"><Link to="/signout">Sign out</Link></NavItem>
                 </Nav>,
                 <Nav pullRight key="greetUser" id="greetUser">
-                    <NavItem eventKey={2}><Link to="/account"><img src={decoded.avatar} alt="headerImg" />&nbsp;{decoded.username}</Link></NavItem>
+                    <NavItem eventKey={2} className="rbLink"><Link to="/account"><img src={decoded.avatar} alt="headerImg" />&nbsp;{decoded.username}</Link></NavItem>
                 </Nav>
 
             ])
         } else {
             return (
                 <Nav pullRight>
-                    <NavItem eventKey={2}><Link to="/signin">Sign In</Link></NavItem>
+                    <NavItem eventKey={2} className="rblink"><Link to="/signin">Sign In</Link></NavItem>
                 </Nav>
             )
         }

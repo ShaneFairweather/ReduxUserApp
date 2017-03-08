@@ -20,8 +20,8 @@ class ControlPanel extends Component {
             return (
                 <ListGroup id="controlPanel">
                     <ListGroupItem id="portrait">
-                        <img className="img-responsive center-block" src={decoded.avatar} alt="userImg"/>
-                        <h5>User</h5>
+                        <img className="img-responsive" src={decoded.avatar} alt="userImg"/>
+                        {/*<h5>User</h5>*/}
                     </ListGroupItem>
                     <Link className="secondLink" to="/"><ListGroupItem>Feed</ListGroupItem></Link>
                     <Link className="thirdLink" to="/account"><ListGroupItem>Profile Settings</ListGroupItem></Link>

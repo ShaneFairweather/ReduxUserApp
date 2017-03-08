@@ -3,14 +3,18 @@ import { reduxForm, Field } from 'redux-form';
 import { Panel, Col, ButtonToolbar, Button, FormGroup, Form, ControlLabel } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions_index';
+import { Link } from 'react-router';
 
-const renderInput = field =>
+
+const renderField = ({ input, label, type, meta: { touched, error } }) => (
     <div>
-        <input {...field.input} type={field.type}/>
-        {field.meta.touched &&
-        field.meta.error &&
-        <span className="error">{field.meta.error}</span>}
+        <label>{label}</label>
+        <div>
+            <input {...input} placeholder={label} type={type}/>
+            {touched && error && <span>{error}</span>}
+        </div>
     </div>
+)
 
 class Signin extends Component {
     handleFormSubmit({ email, password }) {
@@ -41,19 +45,21 @@ class Signin extends Component {
                     {this.renderAlert()}
                     <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                         <FormGroup controlId="signinEmail">
-                            <ControlLabel>Email</ControlLabel>
+                            {/*<ControlLabel>Email</ControlLabel>*/}
                             <Field
                                 name="email"
-                                component={renderInput}
+                                component={renderField}
                                 type="text"
+                                label="Email"
                                 placeholder="Email"/>
                         </FormGroup>
                         <FormGroup controlId="signinPassword">
-                            <ControlLabel>Password</ControlLabel>
+                            {/*<ControlLabel>Password</ControlLabel>*/}
                             <Field
                                 name="password"
-                                component={renderInput}
+                                component={renderField}
                                 type="password"
+                                label="Password"
                                 placeholder="Password"/>
                         </FormGroup>
                         <ButtonToolbar>
@@ -62,6 +68,8 @@ class Signin extends Component {
                             </Button>
                         </ButtonToolbar>
                     </Form>
+                    <br />
+                    <Link to="/signup">Don't have an account?</Link>
                 </Panel>
             </Col>
         )
@@ -77,5 +85,40 @@ Signin = reduxForm({
 })(Signin);
 
 export default connect(mapStateToProps, actions)(Signin);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

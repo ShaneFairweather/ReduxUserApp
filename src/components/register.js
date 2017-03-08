@@ -3,6 +3,7 @@ import { reduxForm, Field } from 'redux-form';
 import { Panel, Col, ButtonToolbar, Button, FormGroup, Form } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions_index';
+import { Link } from 'react-router';
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
     <div>
@@ -109,6 +110,8 @@ class Register extends Component {
                             </Button>
                         </ButtonToolbar>
                     </Form>
+                    <br />
+                    <Link to="/signin">Already have an account?</Link>
                 </Panel>
             </Col>
         )

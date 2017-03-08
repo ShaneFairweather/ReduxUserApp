@@ -14,7 +14,7 @@ export default (
         <Route path="signin" component={Signin} />
         <Route path="signout" component={Signout} />
         <Route path="signup" component={Register} />
-        <Route path="settings" component={Account} />
+        {/*<Route path="settings" component={Account} />*/}
         <Route path="Blog" component={Blog} />
         <Route path="account" component={Account} />
     </Route>

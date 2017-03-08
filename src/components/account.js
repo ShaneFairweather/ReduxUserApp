@@ -10,15 +10,18 @@ const Account = () => {
     console.log(decoded);
     return (
     <Col xs={12} md={6}>
-        <Panel>
+        <Panel className="account">
             <h2>My Account</h2><hr/><br/>
-            <h4>Profile picture</h4>
-            <img src={decoded.avatar} alt="profileImg" />
-            <ButtonToolbar>
-                <Button type="submit">
-                    Upload new picture
-                </Button>
-            </ButtonToolbar><br/><hr/>
+            <div className="avatarContainer">
+                <h4>Profile picture</h4>
+                <img src={decoded.avatar} alt="profileImg" />
+                <ButtonToolbar>
+                    <Button type="submit">
+                        Upload new picture
+                    </Button>
+                </ButtonToolbar>
+            </div>
+            <br/><hr/>
             <h4>Change Password</h4>
             <Form>
                 <FormGroup controlId="formInlineName">
@@ -28,7 +31,7 @@ const Account = () => {
                     <FormControl componentClass="input" placeholder="Repeat password" type="password" />
                 </FormGroup>
                 <ButtonToolbar>
-                    <Button type="submit">
+                    <Button>
                         Change password
                     </Button>
                 </ButtonToolbar>

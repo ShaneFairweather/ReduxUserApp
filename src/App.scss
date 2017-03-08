@@ -30,6 +30,38 @@ body {
   box-shadow: $boxShadow;
   border-radius: 0;
   //background-color: #724290;
+  .navbar-collapse ul li a {
+    color: white;
+    &:hover, &:visited {
+      color: white;
+    }
+  }
+}
+
+.navbar-default {
+  background-color: #864da2;
+  border: none;
+  .navbar-brand {
+    font-family: 'Play', sans-serif;
+    color: white;
+    font-size: 1.7em;
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      color: white;
+      text-shadow: -1px -1px 26px white;
+    }
+  }
+  a {
+    color: white;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    height: 25px;
+  }
 }
 
 #main {
@@ -37,7 +69,12 @@ body {
   margin-bottom: 80px;
 }
 
+
 //=============Components==============//
+
+
+//=============Control Panel==============//
+
 
 .list-group {
   box-shadow: $boxShadow;
@@ -66,7 +103,7 @@ body {
 
 #portrait {
   cursor: default;
-  padding: 20px;
+  padding: 30px;
   &:hover {
     background-color: white;
   }
@@ -96,9 +133,21 @@ body {
   border-top: 0;
 }
 
-.lastLink {
-
+.loginControlPanel {
+  .panel-body {
+    padding: 30px 20px 80px;
+    h2 {
+      margin-top: 8px;
+    }
+    a {
+      color: #864da2
+    }
+  }
 }
+
+
+//=============Forms==============//
+
 
 input {
   display: block;
@@ -127,10 +176,19 @@ input {
   height: 104px;
 }
 
-#userList {
+
+//=============User List==============//
+
+.userList {
   box-shadow: none;
   img {
     border-radius: 3px;
+  }
+  .list-group-item {
+    &:hover {
+      color: white;
+      background-color: #864da2;
+    }
   }
 }
 
@@ -155,14 +213,21 @@ input {
 }
 
 
-.loginControlPanel {
-  .panel-body {
-    padding: 80px 20px;
-  }
-}
+
 
 //=============Account==============//
 
+.account {
+  .panel-body {
+    .avatarContainer {
+      margin: 0 auto;
+      img {
+        height: 180px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
 
 
 

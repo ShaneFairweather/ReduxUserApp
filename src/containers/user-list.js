@@ -39,7 +39,7 @@ class UserList extends Component {
         return (
             <Panel>
                 <h3>Users</h3>
-                <ListGroup id="userList">
+                <ListGroup className="userList">
                     {this.renderUsers()}
                 </ListGroup>
             </Panel>

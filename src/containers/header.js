@@ -14,7 +14,7 @@ class Header extends Component {
                     <NavItem eventKey={3}><Link to="/signout">Sign out</Link></NavItem>
                 </Nav>,
                 <Nav pullRight key="greetUser" id="greetUser">
-                    <NavItem eventKey={2}>Hello, <Link to="/settings">{decoded.username}</Link>!</NavItem>
+                    <NavItem eventKey={2}><Link to="/account"><img src={decoded.avatar} alt="headerImg" />&nbsp;{decoded.username}</Link></NavItem>
                 </Nav>
 
             ])

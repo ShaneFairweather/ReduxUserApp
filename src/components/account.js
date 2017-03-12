@@ -2,6 +2,7 @@ import React from 'react';
 import { Panel, Col, ButtonToolbar, Button, FormControl, FormGroup, Form } from 'react-bootstrap';
 import portrait from '../img/portrait.png';
 import jwtDecode from 'jwt-decode';
+import Dropzone from 'react-dropzone';
 
 
 

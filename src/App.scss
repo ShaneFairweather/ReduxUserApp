@@ -231,6 +231,7 @@ body {
     border-radius: 3px;
   }
   .list-group-item {
+    border: none;
     &:hover {
       color: #333;
       //background-color: $buttonColor;

@@ -148,9 +148,11 @@ body {
   box-shadow: none; }
   .userList img {
     border-radius: 3px; }
-  .userList .list-group-item:hover {
-    color: #333;
-    background-color: #e7e7e7; }
+  .userList .list-group-item {
+    border: none; }
+    .userList .list-group-item:hover {
+      color: #333;
+      background-color: #e7e7e7; }
 
 .post img {
   float: left;

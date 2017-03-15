@@ -16,6 +16,7 @@ mongoose.connect('mongodb://admin:admin1@ds129600.mlab.com:29600/interreact');
 app.use(morgan('combined'));
 app.use(cors());
 app.use(bodyParser.json({ type: '*/*' }));
+app.use(express.static(path.join(__dirname, 'client/build')));
 router(app);
 
 

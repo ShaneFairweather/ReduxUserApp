@@ -1,5 +1,6 @@
 const express = require('express');
 const http = require('http');
+const https = require('https');
 const bodyParser = require('body-parser');
 const app = express();
 const morgan = require('morgan');
@@ -22,6 +23,6 @@ router(app);
 
 
 const port = process.env.port || 3030;
-const server = http.createServer(app);
+const server = https.createServer(app);
 server.listen(process.env.PORT || port);
 console.log('listening on: ' + port);

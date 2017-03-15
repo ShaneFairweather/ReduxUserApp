@@ -2,6 +2,7 @@
 
 var express = require('express');
 var http = require('http');
+var https = require('https');
 var bodyParser = require('body-parser');
 var app = express();
 var morgan = require('morgan');
@@ -23,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 router(app);
 
 var port = process.env.port || 3030;
-var server = http.createServer(app);
+var server = https.createServer(app);
 server.listen(process.env.PORT || port);
 console.log('listening on: ' + port);
 

@@ -24,7 +24,7 @@ var _actions_types = require('./actions_types');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ROOT_URL = 'http://localhost:3030';
+var ROOT_URL = 'https://localhost:3030';
 // https://interreact.herokuapp.com
 function signinUser(_ref) {
     var email = _ref.email,

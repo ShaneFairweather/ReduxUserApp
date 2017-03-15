@@ -15,7 +15,13 @@ var path = require('path');
 
 // mongoose.connect('mongodb://localhost:auth/auth');
 mongoose.connect('mongodb://admin:admin1@ds129600.mlab.com:29600/interreact');
-
+app.use(function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] === 'https') {
+        res.redirect('http://' + req.hostname + req.url);
+    } else {
+        next();
+    }
+});
 app.use(express.static(__dirname + '/public/'));
 app.use(morgan('combined'));
 app.use(cors());

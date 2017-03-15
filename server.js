@@ -8,11 +8,12 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Post = require('./models/post');
 const User = require('./models/user');
+const path = require('path');
 
 // mongoose.connect('mongodb://localhost:auth/auth');
 mongoose.connect('mongodb://admin:admin1@ds129600.mlab.com:29600/interreact');
 
-
+app.use(express.static(__dirname + '/public/'));
 app.use(morgan('combined'));
 app.use(cors());
 app.use(bodyParser.json({ type: '*/*' }));

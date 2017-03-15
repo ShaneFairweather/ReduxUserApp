@@ -36,9 +36,10 @@ module.exports = function (app) {
         });
     });
 
-    // app.get("/users/:id", function(req, res) {
-    //     res.send("These are the user screens");
-    // })
+    app.get("/users/:id", function (req, res) {
+        // res.send("These are the user screens");
+        res.render('index.html');
+    });
 
     app.post('/addpost', function (req, res, next) {
         console.log(req.body);

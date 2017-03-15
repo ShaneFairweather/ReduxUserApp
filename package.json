@@ -37,8 +37,6 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "dev": "node server.js",
-    "postinstall": "webpack -p",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

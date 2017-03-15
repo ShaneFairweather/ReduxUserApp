@@ -23,6 +23,6 @@ router(app);
 
 
 const port = process.env.port || 3030;
-const server = https.createServer(app);
+const server = http.createServer(app);
 server.listen(process.env.PORT || port);
 console.log('listening on: ' + port);

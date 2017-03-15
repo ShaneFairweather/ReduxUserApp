@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 router(app);
 
 var port = process.env.port || 3030;
-var server = https.createServer(app);
+var server = http.createServer(app);
 server.listen(process.env.PORT || port);
 console.log('listening on: ' + port);
 

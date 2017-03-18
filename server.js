@@ -11,8 +11,7 @@ const Post = require('./models/post');
 const User = require('./models/user');
 const path = require('path');
 
-// mongoose.connect('mongodb://localhost:auth/auth');
-mongoose.connect('mongodb://admin:admin1@ds129600.mlab.com:29600/interreact');
+mongoose.connect('mongodb://localhost:auth/auth');
 
 
 app.use(express.static(__dirname + '/public/'));

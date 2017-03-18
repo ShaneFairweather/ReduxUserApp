@@ -8,7 +8,6 @@ class Header extends Component {
     renderLinks() {
         if(this.props.authenticated) {
             const decoded = jwtDecode(localStorage.token)
-            console.log(decoded);
             return ([
                 <Nav pullRight key="signout" id="signout">
                     <NavItem eventKey={3} className="rbLink signoutLink"><Link to="/signout">Sign out</Link></NavItem>
@@ -45,7 +44,6 @@ class Header extends Component {
 }
 
 function mapStateToProps(state) {
-    // console.log(state)
     return {
         authenticated: state.signin.authenticated
     }

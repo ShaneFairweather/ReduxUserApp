@@ -16,7 +16,6 @@ class PostList extends Component {
     }
 
     renderList() {
-        const date = new Date().toDateString();
         return this.props.posts.map((post) => {
             return (
                 <Panel key={post._id} className='post'>
@@ -24,7 +23,7 @@ class PostList extends Component {
                         <div>
                             <img className="postAvatar" src={post.avatar} alt="userAvatar" />
                             <h4 className="postAuthor">{post.author}</h4>
-                            <small>{date}</small>
+                            <small>{post.date}</small>
                         </div>
                         <div className="postBody">{post.content}</div>
                     </div>

@@ -13,15 +13,20 @@ var Post = require('./models/post');
 var User = require('./models/user');
 var path = require('path');
 
-// mongoose.connect('mongodb://localhost:auth/auth');
-mongoose.connect('mongodb://admin:admin1@ds129600.mlab.com:29600/interreact');
+mongoose.connect('mongodb://localhost:auth/auth');
+// mongoose.connect('mongodb://admin:admin1@ds129600.mlab.com:29600/interreact');
+
 
 app.use(express.static(__dirname + '/public/'));
 app.use(morgan('combined'));
 app.use(cors());
 app.use(bodyParser.json({ type: '*/*' }));
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 router(app);
+
+app.get('/', function (request, response) {
+    response.sendFile(__dirname + '/public/index.html');
+});
 
 var port = process.env.port || 3030;
 var server = http.createServer(app);

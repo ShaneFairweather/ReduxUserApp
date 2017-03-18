@@ -8,7 +8,8 @@ var postSchema = new Schema({
     author: String,
     // content: {type: String, required: true}
     content: String,
-    avatar: String
+    avatar: String,
+    date: String
 });
 
 var Post = mongoose.model('Post', postSchema);

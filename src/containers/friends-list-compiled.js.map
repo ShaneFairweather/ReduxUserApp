@@ -1,1 +1,0 @@
-{"version":3,"sources":["post-detail.js"],"names":[],"mappings":";;;;;;;;AAAA;;;;;;;;;;;;IAEqB,U;;;;;;;;;;;iCACR;AACL;AACH;;;;;;kBAHgB,U","file":"post-detail-compiled.js","sourcesContent":["import React, { Component } from 'react';\n\nexport default class PostDetail extends Component {\n    render() {\n        return \n    }\n}"]}

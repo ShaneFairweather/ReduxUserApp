@@ -159,7 +159,8 @@ body {
   margin-right: 10px;
   height: 60px; }
 .post .postAuthor {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  margin-bottom: 0; }
 .post .postBody {
   clear: both;
   margin-top: 20px;

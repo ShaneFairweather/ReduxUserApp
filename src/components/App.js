@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import '../App.css';
-import Header from '../containers/header';
+import Header from './header';
 import Footer from './footer'
-import UserList from '../containers/user-list';
+import UserList from './user-list';
 import ControlPanel from './controlPanel';
 
 

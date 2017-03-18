@@ -99,8 +99,6 @@ function getUsers() {
 
 function getPosts() {
     var request = _axios2.default.get(ROOT_URL + '/posts');
-    console.log(request);
-    console.log("get posts has been called!");
     return {
         type: _actions_types.GET_POSTS,
         payload: request

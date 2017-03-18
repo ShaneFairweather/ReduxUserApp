@@ -86,8 +86,6 @@ export function getUsers() {
 
 export function getPosts() {
     const request = axios.get(`${ROOT_URL}/posts`);
-    console.log(request);
-    console.log("get posts has been called!");
     return {
         type: GET_POSTS,
         payload: request

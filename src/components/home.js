@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Col } from 'react-bootstrap';
 import '../App.css';
-import PostList from '../containers/post-list';
+import PostList from './post-list';
 import PostForm from '../components/post-form';
 
 class Home extends Component {

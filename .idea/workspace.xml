@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ef13b9-ae9e-4aba-952b-f34a581a8f76" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/friends-list-compiled.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/friends-list-compiled.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/header-compiled.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/header-compiled.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/post-list-compiled.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/post-list-compiled.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/post-list.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/user-list-compiled.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/user-list-compiled.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/user-list.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/post-compiled.js" afterPath="$PROJECT_DIR$/models/post-compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/post-compiled.js.map" afterPath="$PROJECT_DIR$/models/post-compiled.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/post.js" afterPath="$PROJECT_DIR$/models/post.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/router-compiled.js" afterPath="$PROJECT_DIR$/router-compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/router-compiled.js.map" afterPath="$PROJECT_DIR$/router-compiled.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/router.js" afterPath="$PROJECT_DIR$/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-compiled.js" afterPath="$PROJECT_DIR$/server-compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-compiled.js.map" afterPath="$PROJECT_DIR$/server-compiled.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css.map" afterPath="$PROJECT_DIR$/src/App.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.scss" afterPath="$PROJECT_DIR$/src/App.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/actions_index-compiled.js" afterPath="$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/actions_index-compiled.js.map" afterPath="$PROJECT_DIR$/src/actions/actions_index-compiled.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/actions_index.js" afterPath="$PROJECT_DIR$/src/actions/actions_index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/controlPanel.js" afterPath="$PROJECT_DIR$/src/components/controlPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home.js" afterPath="$PROJECT_DIR$/src/components/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/user-list.js" afterPath="$PROJECT_DIR$/src/components/user-list.js" />
     </list>
     <ignored path="ReactUserApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,8 +76,8 @@
       <file leaf-file-name="user-list.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/user-list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+            <state relative-caret-position="105">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -240,6 +211,7 @@
         <option value="$PROJECT_DIR$/src/containers/header.js" />
         <option value="$PROJECT_DIR$/src/actions/actions_index.js" />
         <option value="$PROJECT_DIR$/src/components/controlPanel.js" />
+        <option value="$PROJECT_DIR$/src/components/user-list.js" />
       </list>
     </option>
   </component>
@@ -515,12 +487,12 @@
       <workItem from="1488218201323" duration="106566000" />
       <workItem from="1489335448281" duration="2606000" />
       <workItem from="1489480658303" duration="11841000" />
-      <workItem from="1489599821662" duration="11146000" />
+      <workItem from="1489599821662" duration="11418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212686000" />
+    <option name="totallyTimeSpent" value="212958000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,7 +505,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="76" width="1257" height="686" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21116506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -541,9 +513,9 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32042253" sideWeight="0.47977346" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32042253" sideWeight="0.47977346" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33450705" sideWeight="0.47977346" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33450705" sideWeight="0.47977346" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -946,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/user-list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        <state relative-caret-position="105">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

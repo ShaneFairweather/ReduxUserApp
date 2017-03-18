@@ -15,13 +15,6 @@ class UserList extends Component {
     }
 
 
-
-    // componentWillReceiveProps(nextProps){
-    //     console.log(nextProps);
-    //     if(nextProps.value !== this.props.value)
-    //         this.props.getUsers();
-    // }
-
     renderUsers() {
         return this.props.users.map((user) => {
             return (

@@ -33,10 +33,8 @@ class PostForm extends Component {
     handleFormSubmit(formProps) {
         const {resetForm} = this.props;
         const decoded = jwtDecode(localStorage.token)
-        console.log(decoded);
         formProps.author = decoded.username;
         formProps.avatar = decoded.avatar;
-        console.log(formProps);
         this.props.updatePosts(formProps);
     }
 

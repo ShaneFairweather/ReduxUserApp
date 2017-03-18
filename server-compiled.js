@@ -13,9 +13,8 @@ var Post = require('./models/post');
 var User = require('./models/user');
 var path = require('path');
 
-mongoose.connect('mongodb://localhost:auth/auth');
-// mongoose.connect('mongodb://admin:admin1@ds129600.mlab.com:29600/interreact');
-
+// mongoose.connect('mongodb://localhost:auth/auth');
+mongoose.connect('mongodb://admin:admin1@ds129600.mlab.com:29600/interreact');
 
 app.use(express.static(__dirname + '/public/'));
 app.use(morgan('combined'));

@@ -5,10 +5,10 @@
         <item url="file://$PROJECT_DIR$/models/user-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_signIn-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/actions/actions_types-compiled.js" />
-        <item url="file://$PROJECT_DIR$/build/static/js/main.deaadfbc-compiled.js" />
         <item url="file://$PROJECT_DIR$/models/blogPost-compiled.js" />
         <item url="file://$PROJECT_DIR$/services/passport-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/controlPanel-compiled.js" />
+        <item url="file://$PROJECT_DIR$/build/static/js/main.925383b5-compiled.js" />
         <item url="file://$PROJECT_DIR$/build/static/js/main.925383b5-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/user-list-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_addPost-compiled.js" />
@@ -16,8 +16,8 @@
         <item url="file://$PROJECT_DIR$/controllers/authentication-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/reducers/reducer_users-compiled.js" />
-        <item url="file://$PROJECT_DIR$/src/routes-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/routes-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/signout-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/post-form-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/components/footer-compiled.js" />
@@ -53,13 +53,14 @@
       <root url="file://$PROJECT_DIR$/build/static/js/main.62d0eba9-compiled.js" />
       <root url="file://$PROJECT_DIR$/build/static/js/main.884a5da3-compiled.js" />
       <root url="file://$PROJECT_DIR$/build/static/js/main.deaadfbc-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.deaadfbc-compiled.js" />
       <root url="file://$PROJECT_DIR$/models/user-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_signIn-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/actions/actions_types-compiled.js" />
-      <root url="file://$PROJECT_DIR$/build/static/js/main.deaadfbc-compiled.js" />
       <root url="file://$PROJECT_DIR$/models/blogPost-compiled.js" />
       <root url="file://$PROJECT_DIR$/services/passport-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/controlPanel-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/static/js/main.925383b5-compiled.js" />
       <root url="file://$PROJECT_DIR$/build/static/js/main.925383b5-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/user-list-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_addPost-compiled.js" />
@@ -67,8 +68,8 @@
       <root url="file://$PROJECT_DIR$/controllers/authentication-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_postList-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/reducers/reducer_users-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/routes-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/actions/actions_index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/routes-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/signout-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/post-form-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/components/footer-compiled.js" />

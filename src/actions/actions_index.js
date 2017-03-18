@@ -11,7 +11,7 @@ import {
     CHECK_AUTH
 } from './actions_types';
 
-const ROOT_URL = 'http://localhost:3030';
+const ROOT_URL = 'https://interreact.herokuapp.com';
 // https://interreact.herokuapp.com
 export function signinUser({ email, password }) {
     return function(dispatch) {

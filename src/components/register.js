@@ -46,11 +46,7 @@ const validate = values => {
 
 class Register extends Component {
     handleFormSubmit(formProps) {
-        // this.props.signinUser({ email, password });
         this.props.signupUser(formProps);
-        this.props.getUsers();
-        this.props.getUsers();
-
     }
 
     renderAlert() {

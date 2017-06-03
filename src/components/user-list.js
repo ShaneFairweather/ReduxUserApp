@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 import { Panel, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-// import * as actions from '../actions/actions_index';
-import { getUsers } from '../actions/actions_index';
 
-class UserList extends Component {
-    componentWillMount() {
-        this.props.getUsers();
-    }
-
-    componentDidMount() {
-        this.props.getUsers();
-    }
-
-
-    renderUsers() {
-        return this.props.users.map((user) => {
+const UserList = (props) => {
+    const renderUsers = () => {
+        return props.users.map((user) => {
             return (
                 <ListGroupItem key={user._id}>
                     <div>
@@ -28,27 +15,14 @@ class UserList extends Component {
         })
     }
 
-    render() {
-        return (
-            <Panel>
-                <h3>Users</h3>
-                <ListGroup className="userList">
-                    {this.renderUsers()}
-                </ListGroup>
-            </Panel>
-        )
-    }
+     return (
+        <Panel>
+            <h3>Users</h3>
+            <ListGroup className="userList">
+                {renderUsers()}
+            </ListGroup>
+        </Panel>
+    )
 }
 
-
-function mapStateToProps(state) {
-    // console.log(state);
-    return { users: state.users.all }
-}
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ getUsers }, dispatch);
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(UserList);
+export default UserList;

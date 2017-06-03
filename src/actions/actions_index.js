@@ -12,7 +12,7 @@ import {
 } from './actions_types';
 
 // const ROOT_URL = 'https://interreact.herokuapp.com';
-const ROOT_URL = 'http://localhost:3000/';
+const ROOT_URL = 'http://localhost:3030';
 
 // https://interreact.herokuapp.com
 export function signinUser({ email, password }) {
@@ -42,6 +42,7 @@ export function signupUser({email, username, password}) {
                 localStorage.setItem('token', response.data.token);
                 dispatch({ type: AUTH_USER });
                 browserHistory.push('/');
+                getUsers();
             })
             .catch(response => dispatch(authError('An account with that email already exists')))
     }
@@ -79,7 +80,6 @@ export function checkAuth({email, password}) {
 
 export function getUsers() {
     const request = axios.get(`${ROOT_URL}/users`);
-    // console.log(request);
     return {
         type: GET_USERS,
         payload: request
